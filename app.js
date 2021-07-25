@@ -37,19 +37,19 @@ mongoose.connect("mongodb+srv://andras:" +process.env.MONGOOSE_PASS+ "@cluster0.
 });
 
 //schema in order to have a plugin it has to be a mongoose schema//
-const secretUserSchema = new mongoose.Schema({
-  user: String,
+const userSchema = new mongoose.Schema({
+  username: String,
   password: String,
   googleId: String,
   facebookId: String,
-  secret: String
+  secret: Array
 });
 
 //adding plugins to schema//
-secretUserSchema.plugin(passportLocalMongoose);
-secretUserSchema.plugin(findOrCreate);
+userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(findOrCreate);
 
-const User = new mongoose.model("User", secretUserSchema);
+const User = new mongoose.model("User", userSchema);
 
 //configuring passport, serialize=create and deserialize=able to crack open cookie//
 passport.use(User.createStrategy());
@@ -72,7 +72,10 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
+    User.findOrCreate({
+      username: profile.id,
+      googleId: profile.id
+    }, function (err, user) {
       return cb(err, user);
     });
   }
@@ -84,7 +87,10 @@ passport.use(new FacebookStrategy({
     callbackURL: "https://app-secret.herokuapp.com/auth/facebook/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+    User.findOrCreate({
+      username: profile.id,
+      facebookId: profile.id
+    }, function (err, user) {
       return cb(err, user);
     });
   }
