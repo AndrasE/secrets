@@ -46,10 +46,10 @@ const secretUserSchema = new mongoose.Schema({
 });
 
 //adding plugins to schema//
-userSchema.plugin(passportLocalMongoose);
-userSchema.plugin(findOrCreate);
+secretUserSchema.plugin(passportLocalMongoose);
+secretUserSchema.plugin(findOrCreate);
 
-const User = new mongoose.model("User", userSchema);
+const User = new mongoose.model("User", secretUserSchema);
 
 //configuring passport, serialize=create and deserialize=able to crack open cookie//
 passport.use(User.createStrategy());
@@ -126,16 +126,17 @@ app.get("/register", function(req, res){
 });
 
 app.get("/secrets", function(req, res){
-  User.find(secret: {$nin: [null, []] } }, function(err, secrets){
+  User.find({"secret":{$ne: null}}, function(err, foundUser){
     if (err){
       console.log(err);
     } else {
       if (foundUser) {
-      res.render("secrets", {usersWithSecrets: secrets});
+      res.render("secrets", {usersWithSecrets: foundUser});
     }
    }
   });
 });
+
 
 app.get("/mysecrets", function(req, res){
   if (req.isAuthenticated()) {
