@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 //use session packadge with some setup config//
 app.use(session({
@@ -31,13 +31,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://andras:" +process.env.MONGOOSE_PASS+ "@cluster0.zfr0d.mongodb.net/userDB", {
+mongoose.connect("mongodb+srv://andras:" +process.env.MONGOOSE_PASS+ "@cluster0.zfr0d.mongodb.net/secretDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
 
 //schema in order to have a plugin it has to be a mongoose schema//
-const userSchema = new mongoose.Schema({
+const secretUserSchema = new mongoose.Schema({
   user: String,
   password: String,
   googleId: String,
