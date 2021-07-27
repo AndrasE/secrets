@@ -5,7 +5,7 @@
 <div class="main-content">
 <h1><i class="fas fa-sign-in-alt fa-primary"></i> Login</h1>
 
-<form action="/login" method="POST">
+<form action="/login" method="POST" id="formDelay">
   <div class="form-group">
     <input type="email" class="form" name="username" placeholder="Email">
   </div>
@@ -13,7 +13,8 @@
   <div class="form-group">
     <input type="password" class="form" name="password" placeholder="Password">
   </div>
-  <button type="submit" class="button">submit
+  </form>
+  <button type="submit" id="formDelayButton" class="button">submit
     <div class="enter">
 
       <svg
@@ -37,7 +38,7 @@
 </div>
   </button>
   <p class="or">or use</p>
-  <button class="button" type="button" name="button" onclick="location.href='/auth/facebook'"> fabook
+  <button class="button" type="button" name="button" onclick="facebookTimoutFunction()"> fabook
     <div class="enter">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <g class="fa-group">
@@ -49,7 +50,7 @@
     </div>
   </button>
   &nbsp
-  <button class="button" type="button" name="button" onclick="location.href='/auth/google'"> google
+  <button class="button" type="button" name="button" onclick="googleTimoutFunction()"> google
     <div class="enter">
       <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <g class="fa-group">
@@ -60,7 +61,7 @@
       </svg>
     </div>
   </button>
-</form>
+
 
 
 <%- include('partials/footer') %>

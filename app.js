@@ -131,26 +131,77 @@ app.get("/register", function(req, res){
   res.render("register")
 });
 
-app.get("/secrets", function(req, res){
-  User.find({"secret":{$ne: null}}, function(err, foundUser){
-    if (err){
+app.get("/secrets", function(req, res) {
+  User.find({secret: {$nin: [null, []] } }, function(err, secrets) {
+    if (err) {
       console.log(err);
     } else {
-      if (foundUser) {
-      res.render("secrets", {usersWithSecrets: foundUser});
-    }
-   }
+      if (req.isAuthenticated()) {
+        User.findById(req.user.id, function(err, foundUser) {
+          if (err) {
+            console.log(err);
+          } else {
+            res.render("secrets", {
+              secrets: secrets,
+              text: "To access/submit your secrets go to My Secrets"
+            });
+          }
+        });
+      } else {
+        res.render("secrets", {
+          secrets: secrets,
+          text: "Please login/register to submit your own secrets!"
+        });
+    }};
   });
-});
 
 
-app.get("/mysecrets", function(req, res){
-  if (req.isAuthenticated()) {
-    res.render("mysecrets");
-  } else {
-    res.redirect("/login");
-  }
-});
+
+  app.route("/mysecrets")
+    .get(function(req, res) {
+      if (req.isAuthenticated()) {
+        User.findById(req.user.id, function(err, foundUser) {
+          if (!err) {
+            res.render("mysecrets", {
+              userSecrets: foundUser.secret
+            });
+          }
+        })
+      } else {
+        res.render("mysecrets", {
+          userSecrets: []
+        });
+      }
+    })
+    .post(function(req, res) {
+      if (req.isAuthenticated()) {
+        User.findById(req.user.id, function(err, user) {
+          user.secret.push(req.body.secret);
+          user.save(function() {
+            res.redirect("/secrets");
+          });
+        });
+
+      } else {
+        res.redirect("/login");
+      }
+    });
+
+    app.post("/mysecrets/delete", function(req, res) {
+      if (req.isAuthenticated()) {
+        User.findById(req.user.id, function(err, foundUser) {
+          foundUser.secret.splice(foundUser.secret.indexOf(req.body.secret), 1);
+          foundUser.save(function(err) {
+            if (!err) {
+              res.redirect("/secrets");
+            }
+          });
+        });
+      } else {
+        res.redirect("/login");
+      }
+    });
+
 
 app.get("/logout", function(req, res){
   if (req.isAuthenticated()) {
