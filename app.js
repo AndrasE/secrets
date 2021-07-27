@@ -154,54 +154,52 @@ app.get("/secrets", function(req, res) {
         });
     }};
   });
+});
 
+app.route("/mysecrets")
+  .get(function(req, res) {
+    if (req.isAuthenticated()) {
+      User.findById(req.user.id, function(err, foundUser) {
+        if (!err) {
+          res.render("mysecrets", {
+            userSecrets: foundUser.secret
+          });
+        }
+      })
+    } else {
+      res.render("mysecrets", {
+        userSecrets: []
+      });
+    }
+  })
+  .post(function(req, res) {
+    if (req.isAuthenticated()) {
+      User.findById(req.user.id, function(err, user) {
+        user.secret.push(req.body.secret);
+        user.save(function() {
+          res.redirect("/secrets");
+        });
+      });
 
+    } else {
+      res.redirect("/login");
+    }
+  });
 
-  app.route("/mysecrets")
-    .get(function(req, res) {
-      if (req.isAuthenticated()) {
-        User.findById(req.user.id, function(err, foundUser) {
+  app.post("/mysecrets/delete", function(req, res) {
+    if (req.isAuthenticated()) {
+      User.findById(req.user.id, function(err, foundUser) {
+        foundUser.secret.splice(foundUser.secret.indexOf(req.body.secret), 1);
+        foundUser.save(function(err) {
           if (!err) {
-            res.render("mysecrets", {
-              userSecrets: foundUser.secret
-            });
-          }
-        })
-      } else {
-        res.render("mysecrets", {
-          userSecrets: []
-        });
-      }
-    })
-    .post(function(req, res) {
-      if (req.isAuthenticated()) {
-        User.findById(req.user.id, function(err, user) {
-          user.secret.push(req.body.secret);
-          user.save(function() {
             res.redirect("/secrets");
-          });
+          }
         });
-
-      } else {
-        res.redirect("/login");
-      }
-    });
-
-    app.post("/mysecrets/delete", function(req, res) {
-      if (req.isAuthenticated()) {
-        User.findById(req.user.id, function(err, foundUser) {
-          foundUser.secret.splice(foundUser.secret.indexOf(req.body.secret), 1);
-          foundUser.save(function(err) {
-            if (!err) {
-              res.redirect("/secrets");
-            }
-          });
-        });
-      } else {
-        res.redirect("/login");
-      }
-    });
-
+      });
+    } else {
+      res.redirect("/login");
+    }
+  });
 
 app.get("/logout", function(req, res){
   if (req.isAuthenticated()) {
