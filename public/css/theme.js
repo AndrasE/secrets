@@ -70,21 +70,15 @@ function byeTimeoutFunction() {
 };
 
 
+
 //login and register form delay + delete secret from delay function //
-function submitForm() {
-       document.getElementById("formDelay").submit()
-   }
-
-   document.getElementById('formDelayButton').onclick = function() {
-       setTimeout(submitForm, 900);
-   };
-
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    setTimeout(() => {
+      form.submit();
+    }, 900);
+  });
+});
 
 //add new secrets submit form delay funciton//
-   function submitForm1() {
-          document.getElementById("formDelay1").submit()
-      }
-
-      document.getElementById('formDelayButton2').onclick = function() {
-          setTimeout(submitForm, 900);
-      };
