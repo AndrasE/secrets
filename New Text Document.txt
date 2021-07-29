@@ -1,0 +1,23 @@
+.BUTTON_JMB {
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   color: #FFFFFF;
+   font-family: Brush Script MT;
+   font-size: 35px;
+   padding: 15px;
+   background-color: #3D94F6;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.BUTTON_JMB:hover {
+   background: #337FED;
+   border: solid #337FED 1px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   text-decoration: none;
+}

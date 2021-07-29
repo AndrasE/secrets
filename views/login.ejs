@@ -1,68 +1,60 @@
 <%- include('partials/header') %>
 
-<!-- Makes POST request to /register route -->
+<!-- Makes POST request to /login route or uses Oauth2 -->
 <div class="container">
-<div class="main-content">
-<h1><i class="fas fa-sign-in-alt fa-primary"></i> Login</h1>
+  <div class="main-content">
 
-<form action="/login" method="POST" id="formDelay">
-  <div class="form-group">
-    <input type="email" class="form" name="username" placeholder="Email">
+    <div class="headline-container">
+      <h1><i class="fas fa-sign-in-alt fa-primary"></i> Login</h1>
+    </div>
+
+    <div class="content-container">
+      <form action="/login" method="POST" id="formDelay">
+        <input type="email" class="form" name="username" placeholder="Email">
+        <input type="password" class="form" name="password" placeholder="Password">
+
+        <div class="button-container">
+          <button type="submit" id="formDelayButton" class="button">submit
+            <div class="svg-sizing">
+              <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
+                <g class="fa-group">
+                  <path fill="currentColor"
+                    d="m503.691,189.836l-176.004,-151.985c-15.406,-13.305 -39.687,-2.504 -39.687,18.164l0,80.053c-160.629,1.839 -288,34.032 -288,186.258c0,61.441 39.581,122.309 83.333,154.132c13.653,9.931 33.111,-2.533 28.077,-18.631c-45.344,-145.013 21.507,-183.511 176.59,-185.742l0,87.915c0,20.7 24.3,31.453 39.687,18.164l176.004,-152c11.071,-9.562 11.086,-26.753 0,-36.328z"
+                    class="fa-primary"></path>
+                </g>
+              </svg>
+            </div>
+          </button>
+      </form>
+
+      <p>or use</p>
+
+      <button class="button" type="button" name="button" onclick="facebookTimoutFunction()"> fabook
+        <div class="svg-sizing">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <g class="fa-group">
+              <path fill="currentColor"
+                d="m279.14,288l14.22,-92.66l-88.91,0l0,-60.13c0,-25.35 12.42,-50.06 52.24,-50.06l40.42,0l0,-78.89s-36.68,-6.26 -71.75,-6.26c-73.22,0 -121.08,44.38 -121.08,124.72l0,70.62l-81.39,0l0,92.66l81.39,0l0,224l100.17,0l0,-224l74.69,0z"
+                class="fa-primary"></path>
+            </g>
+          </svg>
+        </div>
+      </button>
+
+      <button class="button" type="button" name="button" onclick="googleTimoutFunction()"> google
+        <div class="svg-sizing">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <g class="fa-group">
+              <path fill="currentColor"
+                d="m488,261.8c0,141.5 -96.9,242.2 -240,242.2c-137.2,0 -248,-110.8 -248,-248s110.8,-248 248,-248c66.8,0 123,24.5 166.3,64.9l-67.5,64.9c-88.3,-85.2 -252.5,-21.2 -252.5,118.2c0,86.5 69.1,156.6 153.7,156.6c98.2,0 135,-70.4 140.8,-106.9l-140.8,0l0,-85.3l236.1,0c2.3,12.7 3.9,24.9 3.9,41.4z"
+                class="fa-primary"></path>
+            </g>
+          </svg>
+        </div>
+      </button>
+    </div>
+
   </div>
-  <br>
-  <div class="form-group">
-    <input type="password" class="form" name="password" placeholder="Password">
-  </div>
-
-  <button type="submit" id="formDelayButton" class="button">submit
-    <div class="enter">
-
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fad"
-        data-icon="sign-ou"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512"
-        class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x"
-      >
-        <g class="fa-group">
-          <path
-            fill="currentColor"
-            d="m503.691,189.836l-176.004,-151.985c-15.406,-13.305 -39.687,-2.504 -39.687,18.164l0,80.053c-160.629,1.839 -288,34.032 -288,186.258c0,61.441 39.581,122.309 83.333,154.132c13.653,9.931 33.111,-2.533 28.077,-18.631c-45.344,-145.013 21.507,-183.511 176.59,-185.742l0,87.915c0,20.7 24.3,31.453 39.687,18.164l176.004,-152c11.071,-9.562 11.086,-26.753 0,-36.328z"
-            class="fa-primary"
-          ></path>
-        </g>
-      </svg>
 </div>
-  </button>
-    </form>
-  <p class="or">or use</p>
-  <button class="button" type="button" name="button" onclick="facebookTimoutFunction()"> fabook
-    <div class="enter">
-      <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <g class="fa-group">
-          <path fill="currentColor"
-            d="m279.14,288l14.22,-92.66l-88.91,0l0,-60.13c0,-25.35 12.42,-50.06 52.24,-50.06l40.42,0l0,-78.89s-36.68,-6.26 -71.75,-6.26c-73.22,0 -121.08,44.38 -121.08,124.72l0,70.62l-81.39,0l0,92.66l81.39,0l0,224l100.17,0l0,-224l74.69,0z"
-            class="fa-primary"></path>
-        </g>
-      </svg>
-    </div>
-  </button>
-  &nbsp
-  <button class="button" type="button" name="button" onclick="googleTimoutFunction()"> google
-    <div class="enter">
-      <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <g class="fa-group">
-          <path fill="currentColor"
-            d="m488,261.8c0,141.5 -96.9,242.2 -240,242.2c-137.2,0 -248,-110.8 -248,-248s110.8,-248 248,-248c66.8,0 123,24.5 166.3,64.9l-67.5,64.9c-88.3,-85.2 -252.5,-21.2 -252.5,118.2c0,86.5 69.1,156.6 153.7,156.6c98.2,0 135,-70.4 140.8,-106.9l-140.8,0l0,-85.3l236.1,0c2.3,12.7 3.9,24.9 3.9,41.4z"
-            class="fa-primary"></path>
-        </g>
-      </svg>
-    </div>
-  </button>
-
-
 
 <%- include('partials/footer') %>
