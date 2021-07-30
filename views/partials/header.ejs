@@ -25,8 +25,8 @@
     </li>
 
     <!-- home -->
-    <li class="nav-item">
-      <a href="secrets" class="nav-link">
+    <li class="nav-item" onclick="welcomeTimoutFunction()">
+      <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <g class="fa-group">
 
@@ -40,10 +40,10 @@
     </li>
 
     <!-- mysecrets -->
-    <li class="nav-item">
-      <a href="mysecrets" class="nav-link">
+    <li class="nav-item" onclick="mysecretsTimoutFunction()">
+      <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-alien-monster fa-w-18 fa-9x">
-          <g class="fa-group">
+          <g class="fa-group" >
             <path fill="currentColor"
               d="m438.59975,313.71923l27.36763,-63.70042c4.58036,-10.68458 -4.23683,-22.08146 -17.17634,-22.08146l-66.98772,0c12.59598,-19.23224 20.38259,-41.31369 20.38259,-65.12503l0,-0.30527c44.8875,-7.93711 73.28571,-19.43575 73.28571,-32.25724c0,-13.5338 -31.26094,-25.54122 -80.27076,-33.58009c-10.53482,-33.37658 -30.91741,-66.95667 -46.49062,-84.25551c-10.87835,-12.10919 -29.65781,-15.87423 -45.23103,-8.95469l-31.60446,14.04258c-10.3058,4.5791 -22.44375,4.5791 -32.74955,0l-31.60446,-14.04258c-15.57321,-6.91953 -34.35268,-3.15449 -45.23103,8.95469c-15.45871,17.29884 -35.9558,50.87893 -46.49062,84.25551c-48.89531,8.03887 -80.15625,20.0463 -80.15625,33.58009c0,12.82149 28.39821,24.32013 73.28571,32.25724l0,0.30527c0,23.81134 7.78661,45.89279 20.38259,65.12503l-65.84263,0c-13.16853,0 -21.98571,11.90567 -16.83281,22.692l29.5433,61.25823c-45.91808,23.70958 -77.17902,67.3637 -77.17902,117.93736l0,45.58752c0,25.13419 23.01629,45.58752 51.3,45.58752l410.39999,0c28.2837,0 51.3,-20.45333 51.3,-45.58752l0,-45.58752c0,-49.2508 -29.5433,-91.98911 -73.40022,-116.10572zm-238.06406,174.71825l-47.63571,-195.37509l56.79643,32.56252l27.48214,40.70314l-36.64286,122.10943zm109.92857,0l-36.64286,-122.10943l27.48214,-40.70314l56.79643,-32.56252l-47.63571,195.37509zm47.75022,-303.74721c-4.46585,12.10919 -8.01562,25.03243 -18.89397,33.98713c-11.5654,9.46348 -54.96428,22.79376 -73.28571,-25.43947c-3.20625,-8.54766 -17.63437,-8.54766 -20.95513,0c-19.46652,51.08245 -64.125,32.96955 -73.28571,25.43947c-10.87835,-8.95469 -14.54263,-21.87794 -18.89397,-33.98713c-0.91607,-2.54395 -7.21406,-5.8002 -7.21406,-5.90196l0,-10.98985c32.40603,3.66328 69.85045,5.90196 109.92857,5.90196s77.52254,-2.13692 109.92857,-5.90196l0,10.98985c-0.11451,0.10176 -6.4125,3.25625 -7.32857,5.90196z"
               class="fa-primary"></path>
@@ -55,8 +55,8 @@
     </li>
 
     <!-- login -->
-    <li class="nav-item">
-      <a href="login" class="nav-link">
+    <li class="nav-item" onclick="logout2TimoutFunction()">
+      <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
             <path fill="currentColor"
@@ -69,8 +69,8 @@
     </li>
 
     <!-- register -->
-    <li class="nav-item">
-      <a href="register" class="nav-link">
+    <li class="nav-item" onclick="registerTimoutFunction()">
+      <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="register" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
             <path fill="currentColor"
@@ -83,8 +83,8 @@
     </li>
 
     <!-- log-out     -->
-    <li class="nav-item">
-      <a href="/logout" class="nav-link">
+    <li class="nav-item" onclick="logoutTimoutFunction()">
+      <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
             <path fill="currentColor"
@@ -97,8 +97,8 @@
     </li>
 
     <!-- delete -->
-    <li class="nav-item">
-      <a href="delete" class="nav-link">
+    <li class="nav-item" onclick="deleteTimeoutFunction()">
+      <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
             <path fill="currentColor"

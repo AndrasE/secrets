@@ -28,6 +28,12 @@ function welcomeTimoutFunction() {
 }, 900);
 };
 
+function mysecretsTimoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/mysecrets";
+}, 900);
+};
+
 //facebook button auth href delay funciton//
 function facebookTimoutFunction() {
     setTimeout(function(){
@@ -42,10 +48,23 @@ function googleTimoutFunction() {
 }, 900);
 };
 
+function logoutTimoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/logout";
+}, 900);
+};
+
 //login redirect from logut2 href delay funciton//
 function logout2TimoutFunction() {
     setTimeout(function(){
       window.location.href = "/login";
+}, 900);
+};
+
+//register href delay funciton//
+function registerTimoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/register";
 }, 900);
 };
 
@@ -56,8 +75,14 @@ function logout3TimoutFunction() {
 }, 900);
 };
 
-//delete user redirect href delay funciton //
 function deleteTimeoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/delete";
+}, 900);
+};
+
+//delete user redirect href delay funciton //
+function delete2TimeoutFunction() {
     setTimeout(function(){
       window.location.href = "/delete2";
 }, 900);
@@ -68,8 +93,6 @@ function byeTimeoutFunction() {
       window.location.href = "/secrets";
 }, 900);
 };
-
-
 
 //login and register form delay + delete secret from delay function //
 document.querySelectorAll('form').forEach(form => {
