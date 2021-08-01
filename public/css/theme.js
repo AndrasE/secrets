@@ -21,87 +21,128 @@ function toggleTheme() {
 
 document.getElementById('themeButton').onclick = toggleTheme;
 
-//enter button href delay funciton//
-function welcomeTimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/secrets";
-}, 900);
-};
-
-function mysecretsTimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/mysecrets";
-}, 900);
-};
-
-//facebook button auth href delay funciton//
-function facebookTimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/auth/facebook";
-}, 900);
-};
-
-//google button auth href delay funciton//
-function googleTimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/auth/google";
-}, 900);
-};
-
-function logoutTimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/logout";
-}, 900);
-};
-
-//login redirect from logut2 href delay funciton//
-function logout2TimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/login";
-}, 900);
-};
-
-//register href delay funciton//
-function registerTimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/register";
-}, 900);
-};
-
-//logout redirect href delay funciton//
-function logout3TimoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/logout3";
-}, 900);
-};
-
-function deleteTimeoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/delete";
-}, 900);
-};
-
-//delete user redirect href delay funciton //
-function delete2TimeoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/delete2";
-}, 900);
-};
-
-function byeTimeoutFunction() {
-    setTimeout(function(){
-      window.location.href = "/secrets";
-}, 900);
-};
-
-//login and register form delay + delete secret from delay function //
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     setTimeout(() => {
       form.submit();
-    }, 900);
+    }, 80);
   });
 });
 
-//add new secrets submit form delay funciton//
+
+//buttons timeoutfunctions for rotate svgs before redirect//
+
+function homeButtonTimeoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/secrets";
+}, 850);
+};
+
+function loginButtonTimeoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/login";
+}, 850);
+};
+
+function mysecretsButtonTimeoutFunction() {
+    setTimeout(function(){
+      window.location.href = "/mysecrets";
+}, 850);
+};
+
+function delete2ButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "/delete2";
+  }, 850);
+};
+
+function byeButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "/secrets";
+  }, 850);
+};
+
+function facebookButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "/auth/facebook";
+  }, 850);
+};
+
+function googleButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "/auth/google";
+  }, 850);
+};
+
+function logoutButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "/logout3";
+  }, 850);
+};
+
+
+//navbar timeoutfunctions with add class animation scale in css//
+
+function welcomeTimeoutFunction() {
+  document.getElementById('welcome').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('welcome').classList.remove('scale');
+    window.location.href = "/";
+  }, 500);
+};
+
+function homeTimeoutFunction() {
+  document.getElementById('home').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('home').classList.remove('scale');
+    window.location.href = "/secrets";
+  }, 500);
+};
+
+function mysecretsTimeoutFunction() {
+  document.getElementById('mysecrets').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('mysecrets').classList.remove('scale');
+    window.location.href = "/mysecrets";
+  }, 500);
+};
+
+function loginTimeoutFunction() {
+  document.getElementById('login').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('login').classList.remove('scale');
+    window.location.href = "/login";
+  }, 500);
+};
+
+function registerTimeoutFunction() {
+  document.getElementById('register').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('register').classList.remove('scale');
+    window.location.href = "/register";
+  }, 500);
+};
+
+function logoutTimeoutFunction() {
+  document.getElementById('logout').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('logout').classList.remove('scale');
+    window.location.href = "/logout";
+  }, 500);
+};
+
+function deleteTimeoutFunction() {
+  document.getElementById('delete').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('delete').classList.remove('scale');
+    window.location.href = "/delete";
+  }, 500);
+};
+
+function themeTimeoutFunction() {
+  document.getElementById('themeScale').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('themeScale').classList.remove('scale');
+  }, 500);
+};

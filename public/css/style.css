@@ -72,6 +72,10 @@ p {
   margin-bottom: auto;
 }
 
+.scale {
+    transform: scale(1.1);
+    transition: var(--transition-speed);
+}
 /***** color and transition speed *****/
 
 /*font-fontawesome svg and <i> tags colors */
@@ -254,10 +258,10 @@ p {
   transition-duration: 500ms;
 }
 
-.nav-item:active svg {
+/* .nav-item:active svg {
   transform: scale(1.5);
   transition-duration: 300ms;
-}
+} */
 
 
 
