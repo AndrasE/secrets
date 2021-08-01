@@ -160,21 +160,20 @@ app.get("/secrets", function(req, res) {
 });
 
 app.route("/mysecrets")
-  .get(function(req, res) {
-    if (req.isAuthenticated()) {
-      User.findById(req.user.id, function(err, foundUser) {
-        if (!err) {
-          res.render("mysecrets", {
-            userSecrets: foundUser.secret
-          });
-        }
-      })
-    } else {
-      res.render("mysecrets", {
-        userSecrets: []
-      });
-    }
-  })
+.get(function(req, res) {
+  if (req.isAuthenticated()) {
+    User.findById(req.user.id, function(err, foundUser) {
+      if (!err) {
+        res.render("mysecrets", {
+          userSecrets: foundUser.secret
+        });
+      }
+    })
+  } else {
+    res.render("mysecretslogin", {
+    });
+  }
+})
   .post(function(req, res) {
     if (req.isAuthenticated()) {
       User.findById(req.user.id, function(err, user) {
