@@ -4,16 +4,15 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script defer src="css/theme.js"></script>
-  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
-<nav id="navbar" class="navbar" >
-  <ul class="navbar-nav" >
-    <li class="logo" id="welcome" onclick="welcomeTimeoutFunction()">
-      <a href="#" id="logo-overwrite" class="nav-link" >
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="logo">
+      <a id="logo-overwrite" class="nav-link">
         <span class="link-text logo-text">Secrets</span>
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <g class="fa-group">
@@ -26,7 +25,7 @@
     </li>
 
     <!-- home -->
-    <li class="nav-item" id="home" onclick="homeTimeoutFunction()">
+    <li class="nav-item" onclick="welcomeTimoutFunction()">
       <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <g class="fa-group">
@@ -41,7 +40,7 @@
     </li>
 
     <!-- mysecrets -->
-    <li class="nav-item" id="mysecrets" onclick="mysecretsTimeoutFunction()">
+    <li class="nav-item" onclick="mysecretsTimoutFunction()">
       <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-alien-monster fa-w-18 fa-9x">
           <g class="fa-group" >
@@ -56,7 +55,7 @@
     </li>
 
     <!-- login -->
-    <li class="nav-item" id="login" onclick="loginTimeoutFunction()">
+    <li class="nav-item" onclick="logout2TimoutFunction()">
       <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
@@ -70,13 +69,13 @@
     </li>
 
     <!-- register -->
-    <li class="nav-item"  id="register" onclick="registerTimeoutFunction()">
-      <a class="nav-link" >
-        <svg  aria-hidden="true" focusable="false" data-prefix="fad" data-icon="register" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
-          <g class="fa-group" >
+    <li class="nav-item" onclick="registerTimoutFunction()">
+      <a class="nav-link">
+        <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="register" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
+          <g class="fa-group">
             <path fill="currentColor"
               d="m500.07501,211.53127l-51.70001,0l0,-58.625c0,-8.06094 -5.81625,-14.65625 -12.925,-14.65625l-25.85,0c-7.10875,0 -12.925,6.59531 -12.925,14.65625l0,58.625l-51.70001,0c-7.10875,0 -12.925,6.59531 -12.925,14.65625l0,29.3125c0,8.06094 5.81625,14.65625 12.925,14.65625l51.70001,0l0,58.625c0,8.06094 5.81625,14.65625 12.925,14.65625l25.85,0c7.10875,0 12.925,-6.59531 12.925,-14.65625l0,-58.625l51.70001,0c7.10875,0 12.925,-6.59531 12.925,-14.65625l0,-29.3125c0,-8.06094 -5.81625,-14.65625 -12.925,-14.65625zm-323.12503,43.96875c57.11235,0 103.40001,-52.48769 103.40001,-117.25s-46.28766,-117.25 -103.40001,-117.25s-103.40001,52.48769 -103.40001,117.25s46.28766,117.25 103.40001,117.25zm72.38001,29.3125l-13.49047,0c-17.93344,9.34336 -37.88641,14.65625 -58.88954,14.65625s-40.87532,-5.31289 -58.88954,-14.65625l-13.49047,0c-59.93969,0 -108.57001,55.14414 -108.57001,123.1125l0,38.10625c0,24.27441 17.36797,43.96875 38.775,43.96875l284.35003,0c21.40703,0 38.775,-19.69434 38.775,-43.96875l0,-38.10625c0,-67.96836 -48.63032,-123.1125 -108.57001,-123.1125z"
-              class="fa-primary" ></path>
+              class="fa-primary"></path>
           </g>
         </svg>
         <span class="link-text">Register</span>
@@ -84,7 +83,7 @@
     </li>
 
     <!-- log-out     -->
-    <li class="nav-item" id="logout" onclick="logoutTimeoutFunction()">
+    <li class="nav-item" onclick="logoutTimoutFunction()">
       <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
@@ -98,7 +97,7 @@
     </li>
 
     <!-- delete -->
-    <li class="nav-item" id="delete" onclick="deleteTimeoutFunction()">
+    <li class="nav-item" onclick="deleteTimeoutFunction()">
       <a class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sign-ou" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-space-station-moon-alt fa-w-16 fa-5x">
           <g class="fa-group">
@@ -113,7 +112,7 @@
 
     <!-- theme button -->
     <li class="nav-item" id="themeButton">
-      <a href="#" class="nav-link" id="themeScale" onclick="themeTimeoutFunction()">
+      <a href="#" class="nav-link">
         <svg class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="moon-stars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-moon-stars fa-w-16 fa-7x">
           <g class="fa-group">
             <path fill="currentColor" d="M320 32L304 0l-16 32-32 16 32 16 16 32 16-32 32-16zm138.7 149.3L432 128l-26.7 53.3L352 208l53.3 26.7L432 288l26.7-53.3L512 208z" class="fa-primary"></path>

@@ -21,6 +21,28 @@ function toggleTheme() {
 
 document.getElementById('themeButton').onclick = toggleTheme;
 
+
+
+// Get a reference to an element.
+var myElement = document.querySelector('html');
+
+// Create an instance of Hammer with the reference.
+var hammer = new Hammer(myElement);
+
+// Subscribe to a quick start event: press, tap, or doubletap.
+// For a full list of quick start events, read the documentation.
+hammer.on('swiperight', function() {
+  document.getElementById('navbar').classList.add('expand-nav');
+  document.getElementById('navbar').classList.add('expand-nav logo svg');
+document.getElementById('navbar').classList.add('expand-nav logo-text');
+});
+
+hammer.on('swipeleft', function(e) {
+  document.getElementById('navbar').classList.remove('expand-nav');
+});
+
+
+
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();

@@ -9,24 +9,6 @@
   --transition-speed: 600ms;
 }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(-01);
-  }
-}
-
-@keyframes slideInFromtop {
-  0% {
-    transform: translatey(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 /***** html-tag targeted *****/
 body {
   color: black;
@@ -45,6 +27,11 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #FB9300;
+}
+
+p {
+  font-size: 1.5rem;
+  word-break: break-normal;
 }
 
 hr {
@@ -67,11 +54,6 @@ a {
   color: inherit;
 }
 
-
-.scale {
-    transform: scale(1.1);
-    transition: var(--transition-speed);
-}
 /***** color and transition speed *****/
 
 /*font-fontawesome svg and <i> tags colors */
@@ -89,7 +71,7 @@ a {
 }
 
 /***** id, so first nav-link wont be grayscaled i know its a lame overwrite *****/
-#logo-overwrite:not(.svg){
+#red:not(.svg){
   color: var(--text-secondary);
   filter: grayscale(0%) opacity(1);
   outline-style: groove;
@@ -98,14 +80,18 @@ a {
 /***** classes *****/
 
 .navbar {
-  animation: 0.4s ease-out 0s 1 slideInFromLeft;
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 600ms ease;
   overflow: scroll;
   top: 0;
+  width: 6rem;
   height: 100vh;
     z-index: 1;
+}
+
+.navbar:hover {
+  width: 14rem;
 }
 
 .navbar-nav {
@@ -129,10 +115,26 @@ a {
 .nav-link {
   display: flex;
   align-items: center;
+  height: 5rem;
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: var(--transition-speed);
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.navbar:hover .link-text {
+  display: inline;
 }
 
 .nav-link:hover {
@@ -157,6 +159,11 @@ a {
   transition: var(--transition-speed);
 }
 
+.navbar:hover .logo svg {
+  transform: rotate(-280deg);
+  margin-left: 10rem;
+}
+
 .logo-text {
   display: inline;
   position: absolute;
@@ -168,13 +175,14 @@ a {
   left: 0px;
 }
 
-.container {
-  animation: 0.3s ease-out 0s 1 slideInFromtop;
 
+
+.container {
     display: flex;
     margin: auto;
     background-color: var(--bg-secondary);
     color: var(--text-secondary);
+    margin: 2rem 2rem 10rem 8rem;
     opacity: 80%;
     box-shadow: 6px 15px 30px 10px;
     border-radius: 10px;
@@ -197,17 +205,30 @@ a {
     text-align: center;
   }
 
+.content-container{
+
+}
+
   .form {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    font-size: 24px;
+    padding: 0.5rem;
+    max-width: 20rem;
   }
 
 .button-container{
   display: inline-block;
 }
 
-
+  .svg-sizing {
+  width: 2rem;
+  margin-bottom: 0rem;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
 
 /* buttons hover and animate effect delay in themescript */
 .button {
@@ -216,6 +237,11 @@ a {
    border-radius: 15px;
    color: var(--bg-secondary);
    font-family: 'Open Sans';
+   font-size: 25px;
+   padding-bottom: 14px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-top: 3rem;
    background-color: var(--text-primary);
    text-decoration: none;
    display: inline-block;
@@ -223,9 +249,8 @@ a {
    text-align: center;
    border-radius: 15px;
    border: 0px;
+   margin-bottom: 2REM;
    width: auto;
-   margin-left: 1rem;
-   margin-right: 1rem;
 }
 
 .button:hover {
@@ -245,27 +270,13 @@ a {
 }
 
 .button:focus svg {
-  transform: rotate(+360deg);
-  transition-duration: 900ms;
-}
-
-.nav-link svg {
-  transform: rotate(+360deg);
-  transition-duration: 500ms;
-}
-
-.svg-sizing {
-margin-bottom: 0rem;
-display: inline-block;
-position: relative;
+  transform: rotate(-360deg);
+  transition-duration: 1000ms;
 }
 
 .secret-text {
-  background-color: var(--bg-primary);
-    margin-bottom: auto;
-  }
-
-
+  background-color: var(--bg-primary)
+}
 
 /***** theme presets *****/
 .dark {
@@ -309,201 +320,16 @@ display: block;
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .navbar {
-    width: 3rem;
-  }
-
-.nav-link svg {
-  width: 2rem;
-  min-width: 1rem;
-  max-width: 1.5rem;
-  margin: 0 1rem;
-}
-
-.nav-link {
-  height: 4rem;
-}
-
-
-.link-text {
-  display: inline;
-  margin-left: 1rem;
-  font-size: 1rem;
-}
-
-.container {
-    margin: 1rem 1rem 1rem auto;
-    width: 75%
-}
-
-.button {
-     font-size: 16px;
-     padding-bottom: 8px;
-     padding-left: 8px;
-     padding-right: 8px;
-     margin-bottom: 1rem;
-     margin-top: 1rem;
-}
-
-.button-container{
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-.svg-sizing {
-    width: 20px;
-    top: 5px;
-}
-
-.content-container{
-  padding-top: 1rem;
-}
-
-.extra{
-  padding-top: 0rem;
-}
-
-.form {
-  font-size: 16px;
-  padding: 0.5rem;
-  max-width: 85%;
-}
-
-input.form {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-select.form{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.expand-nav {
-  width: 10rem;
-}
-.expand-nav .logo svg {
-  transform: rotate(-280deg);
-  margin-left: 8rem;
-}
-
-.expand-nav .logo-text {
-  left: 0px;
-}
-
 }
 
 /* Large screens */
 @media only screen and (min-width: 600px) {
-
-h1 {
-  font-size: 32px;
-}
-
-p {
-  font-size: 25px;
-  line-height: 4rem;
-  word-break: break-normal;
-}
-
-  .navbar {
-    width: 6rem;
+  .container {
+    margin-left: auto;
+    margin-right:auto;
+    width: 50%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 3rem;
   }
-
-  .navbar:hover {
-    width: 14rem;
-  }
-
-  .nav-link svg {
-    width: 2rem;
-    min-width: 2rem;
-    margin: 0 1.5rem;
-  }
-
-  .nav-link {
-    height: 5rem;
-  }
-
-  .link-text {
-      display: inline;
-      margin-left: 1rem;
-    }
-
-  .navbar:hover .logo svg {
-    transform: rotate(-280deg);
-    margin-left: 10rem;
-  }
-
-  .navbar:hover .link-text {
-    display: inline;
-  }
-
-  /* navbar swipe effect :) */
-    .expand-nav {
-      width: 14rem;
-    }
-    .expand-nav .logo svg {
-      transform: rotate(-280deg);
-      margin-left: 10rem;
-    }
-
-    .expand-nav .logo-text {
-      left: 0px;
-    }
-
-.container {
-    margin: 4rem auto;
-    width: 50%
-}
-
-.button {
-     font-size: 25px;
-     padding-bottom: 14px;
-     padding-left: 10px;
-     padding-right: 10px;
-     margin-bottom: 1rem;
-     margin-top: 1rem;
-}
-
-.button-container{
-  display: inline-block;
-
-  margin-bottom: 3rem;
-}
-
-.svg-sizing {
-    width: 2rem;
-    top: 10px;
-}
-
-.headline-container {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.extra{
-  padding-top: 0rem;
-}
-
-.form {
-  font-size: 24px;
-  padding: 0.5rem;
-  max-width: 80%;
-}
-
-input.form {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-select.form{
-
-  margin-bottom: 1rem;
-}
-
 }
