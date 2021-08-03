@@ -122,10 +122,6 @@ a {
   width: 100%;
 }
 
-.nav-item:last-child {
-  margin-top: auto;
-}
-
 .nav-link {
   display: flex;
   align-items: center;
@@ -164,9 +160,6 @@ a {
   transition: var(--transition-speed);
 }
 
-.navbar:hover .logo-text {
-  left: 0px;
-}
 
 .container {
   animation: 0.3s ease-out 0s 1 slideInFromtop;
@@ -265,7 +258,9 @@ position: relative;
     margin-bottom: auto;
   }
 
-
+  .expand-nav .logo-text {
+    left: 0px;
+  }
 
 /***** theme presets *****/
 .dark {
@@ -384,18 +379,23 @@ select.form{
   margin-bottom: 0.5rem;
 }
 
-.expand-nav {
-  width: 10rem;
-}
-.expand-nav .logo svg {
-  transform: rotate(-280deg);
-  margin-left: 8rem;
-}
+/* navbar swipe effect :) */
+  .expand-nav {
+    width: 10rem;
+  }
 
-.expand-nav .logo-text {
-  left: 0px;
-}
+  .expand-nav .logo svg {
+    transform: rotate(-280deg);
+    margin-left: 7.5rem;
+  }
 
+  .expand-nav-logo-text {
+    left: 0px;
+  }
+
+  .nav-item:last-child {
+    margin: auto;
+  }
 }
 
 /* Large screens */
@@ -429,32 +429,44 @@ p {
     height: 5rem;
   }
 
+  .nav-item:last-child {
+    margin-top: auto;
+  }
+
   .link-text {
       display: inline;
       margin-left: 1rem;
     }
 
-  .navbar:hover .logo svg {
-    transform: rotate(-280deg);
-    margin-left: 10rem;
-  }
+    .navbar:hover .logo svg {
+        transform: rotate(-280deg);
+        margin-left: 10rem;
+      }
 
   .navbar:hover .link-text {
     display: inline;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
   }
 
   /* navbar swipe effect :) */
     .expand-nav {
       width: 14rem;
     }
+
     .expand-nav .logo svg {
       transform: rotate(-280deg);
       margin-left: 10rem;
     }
 
-    .expand-nav .logo-text {
+    .expand-nav-logo-text {
       left: 0px;
     }
+
+
+
 
 .container {
     margin: 4rem auto;

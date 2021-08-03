@@ -33,12 +33,14 @@ var hammer = new Hammer(myElement);
 // For a full list of quick start events, read the documentation.
 hammer.on('swiperight', function() {
   document.getElementById('navbar').classList.add('expand-nav');
-  document.getElementById('navbar').classList.add('expand-nav logo svg');
-document.getElementById('navbar').classList.add('expand-nav logo-text');
+  document.querySelector('.logo svg').classList.add('expand-nav-logo-svg');
+document.querySelector('.logo-text').classList.add('expand-nav-logo-text');
 });
 
 hammer.on('swipeleft', function(e) {
   document.getElementById('navbar').classList.remove('expand-nav');
+  document.querySelector('.logo svg').classList.remove('expand-nav-logo-svg');
+  document.querySelector('.logo-text').classList.remove('expand-nav-logo-text');
 });
 
 
@@ -159,6 +161,14 @@ function deleteTimeoutFunction() {
   setTimeout(function() {
     document.getElementById('delete').classList.remove('scale');
     window.location.href = "/delete";
+  }, 500);
+};
+
+function aboutTimeoutFunction() {
+  document.getElementById('about').classList.add('scale');
+  setTimeout(function() {
+    document.getElementById('about').classList.remove('scale');
+    window.location.href = "/about";
   }, 500);
 };
 

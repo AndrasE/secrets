@@ -259,6 +259,15 @@ app.get("/bye", function(req, res) {
   res.render("bye")
 });
 
+app.get("/about", function(req, res){
+res.render("about")
+});
+
+app.get("/about2", function(req, res){
+res.render("about2")
+});
+
+
 app.post("/register", function(req, res) {
   User.register({
     username: req.body.username
