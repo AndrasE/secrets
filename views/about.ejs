@@ -7,17 +7,32 @@
       <h1><i class="fas fa-file-contract fa-primary"></i> About</h1>
     </div>
 
-    <div class="content-container">
-      <p>It was a pleasure to have you here!</p>
-      <p> Feel free to join and visit our Secrets again.</p>
+    <div class="content-container about">
+      <p>Hi there 👋 </p>
+  <p>This project was part of my Web Development studies. The original application was pretty barebone and as I liked the idea I took it further and further making it more and more complicated, but also more useful.</p>
+<p>The subject of the studies was around security and how password and other sensitive information can be and/or should be stored in a database, safely. It's hard to say what is happening on the backend and if your passwords are stored safely. Most places use encryption, but the level of encryption can vary. I did try to figure out an encrypted password using a simple algorithm and ended up seceding, so encryptions are not made equal at all. There are many ways it can be done but I won't go into details, bcus it's the "About" page and not the "How to bore myself to sleep" page.
+  <p>The main thing to know is that although the way this page stores your data is pretty safe, it is still not as safe as Facebook or Google handles info on their databases. It's a good idea to use their login buttons as they authenticate you on their end and instead of passing over a password to a website they just send a token saying it's ok or not ok. Basically you login to Gmail and Gmail sends the website and ok signal on my end. Obviously, you need to consider here that they do not necessarily supply an app or a webpage only with a token. They can send a shittons of information about the user if it's required and profitable for them to do so. One hand it's keep you safe to log in with them because they are the most advanced in tech but at the same time they might send other info to the app if needed. Find it in the small letters what certain apps try to access.. </p>
+  <p>Your information is value and business! For this project they only send me a token which says you are authenticated or not and your google or facebook id nothing more. The reason is because I didn't request it as it wouldn't fit the purpose of this app, but as you can log in to Tinder through Facebook your profile is pretty much set up after the first login already. Name, dob, pictures, interests are all pushed on to the app without actually you doing anything. Less hassle i guess, the new world order. <p>The other interesting part of this app is the session cookie it uses. You log in whichever way you like it creates a cookie on your end saying that you are logged in. If you go to whatever page you like and come back,you remain logged in as the cookie is stored on your browser and say that you are authenticated. Once you close the browser or you log out, this cookie will be demolished and you need to log in again.</p>
+    <p>I hope you found it interesting, I did!</p>
 
       <div class="button-container">
-        <button class="button" type="button" name="button" onclick="byeButtonTimeoutFunction()"> home
+        <button class="button" type="button" name="button" onclick="homeButtonTimeoutFunction()"> home
           <div class="svg-sizing">
             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <g class="fa-group">
                 <path fill="currentColor"
                   d="m14.99992,179.34469c0,91.31672 73.56533,165.34281 164.31251,165.34281c10.47492,0 20.71645,-0.9977 30.64708,-2.88318l22.41745,25.37839a-22.40532,22.54594 0 0 1 16.74681,7.5673l34.75116,0l0,37.57813c0,12.45245 10.03147,22.54688 22.40625,22.54688l37.34375,0l0,37.57813c0,12.45245 10.03147,22.54688 22.40625,22.54688l104.56251,0c12.37479,0 22.40625,-10.09442 22.40625,-22.54688l0,-73.33277c0,-5.97962 -2.36106,-11.71498 -6.56223,-15.94346l-151.05735,-152.0054c5.34296,-16.30327 8.24457,-33.72355 8.24457,-51.82775c0,-91.31672 -73.56439,-165.34281 -164.31158,-165.34375c-91.01513,-0.00094 -164.31344,73.75741 -164.31344,165.34469zm164.31251,-45.09469c0,24.9049 -20.06293,45.09375 -44.8125,45.09375s-44.8125,-20.18885 -44.8125,-45.09375s20.06293,-45.09375 44.8125,-45.09375s44.8125,20.18885 44.8125,45.09375z"
+                  class="fa-primary"></path>
+              </g>
+            </svg>
+          </div>
+        </button>
+        <button class="button" type="button" name="button" onclick="moreButtonTimeoutFunction()"> more
+          <div class="svg-sizing">
+            <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <g class="fa-group">
+                <path fill="currentColor"
+                  d="m98.61561,139l325.6688,0c22.52975,0 33.79463,35.90557 17.8466,56.94791l-162.77112,214.93244c-9.87259,13.02621 -25.94718,13.02621 -35.81977,0l-162.77112,-214.93244c-15.94803,-21.04234 -4.68315,-56.94791 17.8466,-56.94791z"
                   class="fa-primary"></path>
               </g>
             </svg>

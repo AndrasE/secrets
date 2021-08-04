@@ -359,6 +359,12 @@ display: block;
   padding-top: 1rem;
 }
 
+.content-container.about p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
 .extra{
   padding-top: 0rem;
 }
@@ -409,6 +415,12 @@ p {
   font-size: 25px;
   line-height: 4rem;
   word-break: break-normal;
+}
+
+.content-container.about p {
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  text-align: justify;
 }
 
   .navbar {

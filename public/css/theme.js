@@ -81,9 +81,9 @@ function delete2ButtonTimeoutFunction() {
   }, 850);
 };
 
-function byeButtonTimeoutFunction() {
+function moreButtonTimeoutFunction() {
   setTimeout(function() {
-    window.location.href = "/secrets";
+    window.location.href = "/about2";
   }, 850);
 };
 
