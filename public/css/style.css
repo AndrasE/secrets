@@ -6,7 +6,7 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --webkit--webkit-transition-speed: 600ms;
+  --transition-speed: 600ms;
 }
 
 @keyframes slideInFromLeft {
@@ -58,7 +58,7 @@ hr {
 }
 
 hr:hover {
-  -webkit-transition: 600ms linear;
+  transition: 600ms linear;
   width: 50%
 }
 
@@ -70,7 +70,7 @@ a {
 
 .scale {
     transform: scale(1.1);
-    -webkit-transition: var(--transition-speed);
+    transition: var(--transition-speed);
 }
 /***** color and transition speed *****/
 
@@ -85,7 +85,7 @@ a {
 /*transitions*/
 .fa-primary,
 .fa-secondary {
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 /***** id, so first nav-link wont be grayscaled i know its a lame overwrite *****/
@@ -101,7 +101,7 @@ a {
   animation: 0.4s ease-out 0s 1 slideInFromLeft;
   position: fixed;
   background-color: var(--bg-primary);
-  -webkit-transition: width 600ms ease;
+  transition: width 600ms ease;
   overflow: scroll;
   top: 0;
   height: 100vh;
@@ -128,7 +128,7 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 .nav-link:hover {
@@ -150,14 +150,14 @@ a {
 
 .logo svg {
   transform: rotate(0deg);
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 .logo-text {
   display: inline;
   position: absolute;
   left: -999px;
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 
@@ -219,6 +219,7 @@ a {
    width: auto;
    margin-left: 1rem;
    margin-right: 1rem;
+   -webkit-backface-visibility: hidden;
 }
 
 .button:hover {
@@ -239,12 +240,14 @@ a {
 
 .button:focus svg {
   transform: rotate(+360deg);
-  -webkit-transition-duration: 900ms;
+  transition-duration: 900ms;
+  -webkit-backface-visibility: hidden
 }
 
 .nav-link svg {
   transform: rotate(+360deg);
-  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-backface-visibility: hidden
 }
 
 .svg-sizing {
@@ -388,11 +391,15 @@ select.form{
 /* navbar swipe effect :) */
   .expand-nav {
     width: 10rem;
+    -webkit-backface-visibility: hidden;
+
   }
 
   .expand-nav .logo svg {
     transform: rotate(-280deg);
     margin-left: 7.5rem;
+    -webkit-backface-visibility: hidden;
+
   }
 
   .expand-nav-logo-text {
