@@ -58,7 +58,7 @@ hr {
 }
 
 hr:hover {
-  transition: 600ms linear;
+  -webkit-transition: 600ms linear;
   width: 50%
 }
 
@@ -106,7 +106,6 @@ a {
   top: 0;
   height: 100vh;
     z-index: 1;
-    backface-visibility: hidden !important
 }
 
 .navbar-nav {
@@ -117,7 +116,6 @@ a {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  backface-visibility: hidden !important
 }
 
 .nav-item {
@@ -153,7 +151,6 @@ a {
 .logo svg {
   transform: rotate(0deg);
   transition: var(--transition-speed);
-  backface-visibility: hidden !important
 }
 
 .logo-text {
@@ -161,7 +158,6 @@ a {
   position: absolute;
   left: -999px;
   transition: var(--transition-speed);
-  backface-visibility: hidden !important
 }
 
 
@@ -315,7 +311,6 @@ display: block;
 
   .navbar {
     width: 3rem;
-    backface-visibility: hidden !important
   }
 
 .nav-link svg {
@@ -393,7 +388,6 @@ select.form{
 /* navbar swipe effect :) */
   .expand-nav {
     width: 10rem;
-    backface-visibility: hidden !important
   }
 
   .expand-nav .logo svg {
@@ -431,12 +425,10 @@ p {
 
   .navbar {
     width: 6rem;
-    backface-visibility: hidden !important
   }
 
   .navbar:hover {
     width: 14rem;
-    backface-visibility: hidden !important
   }
 
   .nav-link svg {
@@ -461,12 +453,10 @@ p {
     .navbar:hover .logo svg {
         transform: rotate(-280deg);
         margin-left: 10rem;
-        backface-visibility: hidden !important
       }
 
   .navbar:hover .link-text {
     display: inline;
-    backface-visibility: hidden !important
   }
 
   .navbar:hover .logo-text {
@@ -476,13 +466,11 @@ p {
   /* navbar swipe effect :) */
     .expand-nav {
       width: 14rem;
-      backface-visibility: hidden !important
     }
 
     .expand-nav .logo svg {
       transform: rotate(-280deg);
       margin-left: 10rem;
-      backface-visibility: hidden !important
     }
 
     .expand-nav-logo-text {
