@@ -6,7 +6,7 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --webkit-transition-speed: 600ms;
+  --webkit--webkit-transition-speed: 600ms;
 }
 
 @keyframes slideInFromLeft {
@@ -70,7 +70,7 @@ a {
 
 .scale {
     transform: scale(1.1);
-    transition: var(--transition-speed);
+    -webkit-transition: var(--transition-speed);
 }
 /***** color and transition speed *****/
 
@@ -85,7 +85,7 @@ a {
 /*transitions*/
 .fa-primary,
 .fa-secondary {
-  transition: var(--transition-speed);
+  -webkit-transition: var(--transition-speed);
 }
 
 /***** id, so first nav-link wont be grayscaled i know its a lame overwrite *****/
@@ -101,7 +101,7 @@ a {
   animation: 0.4s ease-out 0s 1 slideInFromLeft;
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 600ms ease;
+  -webkit-transition: width 600ms ease;
   overflow: scroll;
   top: 0;
   height: 100vh;
@@ -128,7 +128,7 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
+  -webkit-transition: var(--transition-speed);
 }
 
 .nav-link:hover {
@@ -150,14 +150,14 @@ a {
 
 .logo svg {
   transform: rotate(0deg);
-  transition: var(--transition-speed);
+  -webkit-transition: var(--transition-speed);
 }
 
 .logo-text {
   display: inline;
   position: absolute;
   left: -999px;
-  transition: var(--transition-speed);
+  -webkit-transition: var(--transition-speed);
 }
 
 
@@ -239,12 +239,12 @@ a {
 
 .button:focus svg {
   transform: rotate(+360deg);
-  transition-duration: 900ms;
+  -webkit-transition-duration: 900ms;
 }
 
 .nav-link svg {
   transform: rotate(+360deg);
-  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
 }
 
 .svg-sizing {
