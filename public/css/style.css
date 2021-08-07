@@ -7,7 +7,6 @@
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 600ms;
-  --webkit-backface-visibility: hidden;
 }
 
 @keyframes slideInFromLeft {
@@ -99,7 +98,6 @@ a {
 /***** classes *****/
 
 .navbar {
-    --webkit-transform-style: preserve-3d;
   animation: 0.4s ease-out 0s 1 slideInFromLeft;
   position: fixed;
   background-color: var(--bg-primary);
@@ -108,10 +106,10 @@ a {
   top: 0;
   height: 100vh;
     z-index: 1;
+    backface-visibility: hidden !important
 }
 
 .navbar-nav {
-    --webkit-transform-style: preserve-3d;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -119,6 +117,7 @@ a {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  backface-visibility: hidden !important
 }
 
 .nav-item {
@@ -154,6 +153,7 @@ a {
 .logo svg {
   transform: rotate(0deg);
   transition: var(--transition-speed);
+  backface-visibility: hidden !important
 }
 
 .logo-text {
@@ -161,6 +161,7 @@ a {
   position: absolute;
   left: -999px;
   transition: var(--transition-speed);
+  backface-visibility: hidden !important
 }
 
 
@@ -313,8 +314,8 @@ display: block;
   }
 
   .navbar {
-      --webkit-transform-style: preserve-3d;
     width: 3rem;
+    backface-visibility: hidden !important
   }
 
 .nav-link svg {
@@ -391,8 +392,8 @@ select.form{
 
 /* navbar swipe effect :) */
   .expand-nav {
-      --webkit-transform-style: preserve-3d;
     width: 10rem;
+    backface-visibility: hidden !important
   }
 
   .expand-nav .logo svg {
@@ -429,13 +430,13 @@ p {
 }
 
   .navbar {
-    --webkit-transform-style: preserve-3d;
     width: 6rem;
+    backface-visibility: hidden !important
   }
 
   .navbar:hover {
-    --webkit-transform-style: preserve-3d;
     width: 14rem;
+    backface-visibility: hidden !important
   }
 
   .nav-link svg {
@@ -458,31 +459,30 @@ p {
     }
 
     .navbar:hover .logo svg {
-        --webkit-transform-style: preserve-3d;
         transform: rotate(-280deg);
         margin-left: 10rem;
+        backface-visibility: hidden !important
       }
 
   .navbar:hover .link-text {
-      --webkit-transform-style: preserve-3d;
     display: inline;
+    backface-visibility: hidden !important
   }
 
   .navbar:hover .logo-text {
-      --webkit-transform-style: preserve-3d;
     left: 0px;
   }
 
   /* navbar swipe effect :) */
     .expand-nav {
-        --webkit-transform-style: preserve-3d;
       width: 14rem;
+      backface-visibility: hidden !important
     }
 
     .expand-nav .logo svg {
-        --webkit-transform-style: preserve-3d;
       transform: rotate(-280deg);
       margin-left: 10rem;
+      backface-visibility: hidden !important
     }
 
     .expand-nav-logo-text {
