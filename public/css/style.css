@@ -235,16 +235,22 @@ a {
   -moz-border-radius: 10px;
   border-radius: 15px;
   text-decoration: none;
+  -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 
 .button:focus svg {
-  -webkit-transform: rotate(+360deg);
-  -webkit-transition-duration: 900ms;
+  transform: rotate(+360deg);
+  transition-duration: 900ms;
+  -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 
 .nav-link svg {
-  -webkit-transform: rotate(+360deg);
-  -webkit-transition-duration: 500ms;
+  transform: rotate(+360deg);
+  transition-duration: 500ms;
+  -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 
 .svg-sizing {
