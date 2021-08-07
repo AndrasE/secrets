@@ -238,13 +238,13 @@ a {
 }
 
 .button:focus svg {
-  transform: rotate(+360deg);
-  transition-duration: 900ms;
+  -webkit-transform: rotate(+360deg);
+  -webkit-transition-duration: 900ms;
 }
 
 .nav-link svg {
-  transform: rotate(+360deg);
-  transition-duration: 500ms;
+  -webkit-transform: rotate(+360deg);
+  -webkit-transition-duration: 500ms;
 }
 
 .svg-sizing {
