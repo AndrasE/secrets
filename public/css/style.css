@@ -235,22 +235,16 @@ a {
   -moz-border-radius: 10px;
   border-radius: 15px;
   text-decoration: none;
-  -webkit-backface-visibility: hidden;
-backface-visibility: hidden;
 }
 
 .button:focus svg {
   transform: rotate(+360deg);
   transition-duration: 900ms;
-  -webkit-backface-visibility: hidden;
-backface-visibility: hidden;
 }
 
 .nav-link svg {
   transform: rotate(+360deg);
   transition-duration: 500ms;
-  -webkit-backface-visibility: hidden;
-backface-visibility: hidden;
 }
 
 .svg-sizing {
