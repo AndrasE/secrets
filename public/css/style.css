@@ -11,19 +11,19 @@
 
 @keyframes slideInFromLeft {
   0% {
-    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateX(-01);
+    transform: translateX(-01);
   }
 }
 
 @keyframes slideInFromtop {
   0% {
-    -webkit-transform: translatey(-100%);
+    transform: translatey(-100%);
   }
   100% {
-    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -58,7 +58,7 @@ hr {
 }
 
 hr:hover {
-  -webkit-transition: 600ms linear;
+  transition: 600ms linear;
   width: 50%
 }
 
@@ -69,8 +69,8 @@ a {
 
 
 .scale {
-    -webkit-transform: scale(1.1);
-    -webkit-transition: var(--transition-speed);
+    transform: scale(1.1);
+    transition: var(--transition-speed);
 }
 /***** color and transition speed *****/
 
@@ -85,7 +85,7 @@ a {
 /*transitions*/
 .fa-primary,
 .fa-secondary {
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 /***** id, so first nav-link wont be grayscaled i know its a lame overwrite *****/
@@ -101,7 +101,7 @@ a {
   animation: 0.4s ease-out 0s 1 slideInFromLeft;
   position: fixed;
   background-color: var(--bg-primary);
-  -webkit-transition: width 600ms ease;
+  transition: width 600ms ease;
   overflow: scroll;
   top: 0;
   height: 100vh;
@@ -128,7 +128,7 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 .nav-link:hover {
@@ -149,15 +149,15 @@ a {
 }
 
 .logo svg {
-  -webkit-transform: rotate(0deg);
-  -webkit-transition: var(--transition-speed);
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
 }
 
 .logo-text {
   display: inline;
   position: absolute;
   left: -999px;
-  -webkit-transition: var(--transition-speed);
+  transition: var(--transition-speed);
 }
 
 
@@ -238,13 +238,13 @@ a {
 }
 
 .button:focus svg {
-  -webkit-transform: rotate(+360deg);
-  -webkit-transition-duration: 900ms;
+  transform: rotate(+360deg);
+  transition-duration: 900ms;
 }
 
 .nav-link svg {
-  -webkit-transform: rotate(+360deg);
-  -webkit-transition-duration: 500ms;
+  transform: rotate(+360deg);
+  transition-duration: 500ms;
 }
 
 .svg-sizing {
@@ -391,7 +391,7 @@ select.form{
   }
 
   .expand-nav .logo svg {
-    -webkit-transform: rotate(-280deg);
+    transform: rotate(-280deg);
     margin-left: 7.5rem;
   }
 
@@ -451,7 +451,7 @@ p {
     }
 
     .navbar:hover .logo svg {
-        -webkit-transform: rotate(-280deg);
+        transform: rotate(-280deg);
         margin-left: 10rem;
       }
 
@@ -469,7 +469,7 @@ p {
     }
 
     .expand-nav .logo svg {
-      -webkit-transform: rotate(-280deg);
+      transform: rotate(-280deg);
       margin-left: 10rem;
     }
 
