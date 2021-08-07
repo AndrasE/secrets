@@ -219,6 +219,8 @@ a {
    width: auto;
    margin-left: 1rem;
    margin-right: 1rem;
+   -webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
 }
 
 .button:hover {
@@ -240,6 +242,7 @@ a {
 .button:focus svg {
   transform: rotate(+360deg);
   transition-duration: 900ms;
+  -webkit-
 }
 
 .nav-link svg {
