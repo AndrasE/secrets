@@ -33,6 +33,8 @@ body {
   margin: 0;
   padding: 0;
   background-image: url(wallpaper.jpg);
+  -webkit-transform:translate3d(0,0,0);
+
 }
 
 body::-webkit-scrollbar {
@@ -219,8 +221,6 @@ a {
    width: auto;
    margin-left: 1rem;
    margin-right: 1rem;
-   -webkit-perspective: 1000;
--webkit-backface-visibility: hidden;
 }
 
 .button:hover {
@@ -242,7 +242,6 @@ a {
 .button:focus svg {
   transform: rotate(+360deg);
   transition-duration: 900ms;
-  -webkit-
 }
 
 .nav-link svg {
@@ -391,21 +390,15 @@ select.form{
 /* navbar swipe effect :) */
   .expand-nav {
     width: 10rem;
-    -webkit-perspective: 1000;
--webkit-backface-visibility: hidden;
   }
 
   .expand-nav .logo svg {
     transform: rotate(-280deg);
     margin-left: 7.5rem;
-    -webkit-perspective: 1000;
--webkit-backface-visibility: hidden;
   }
 
   .expand-nav-logo-text {
     left: 0px;
-    -webkit-perspective: 1000;
--webkit-backface-visibility: hidden;
   }
 
   .nav-item:last-child {
