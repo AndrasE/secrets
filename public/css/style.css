@@ -106,8 +106,6 @@ a {
   top: 0;
   height: 100vh;
     z-index: 1;
-    -webkit-backface-visibility: hidden;
-
 }
 
 .navbar-nav {
@@ -313,8 +311,6 @@ display: block;
 
   .navbar {
     width: 3rem;
-    -webkit-backface-visibility: hidden;
-
   }
 
 .nav-link svg {
@@ -322,8 +318,6 @@ display: block;
   min-width: 1rem;
   max-width: 1.5rem;
   margin: 0 1rem;
-  -webkit-backface-visibility: hidden;
-
 }
 
 .nav-link {
