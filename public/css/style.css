@@ -391,15 +391,21 @@ select.form{
 /* navbar swipe effect :) */
   .expand-nav {
     width: 10rem;
+    -webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
   }
 
   .expand-nav .logo svg {
     transform: rotate(-280deg);
     margin-left: 7.5rem;
+    -webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
   }
 
   .expand-nav-logo-text {
     left: 0px;
+    -webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
   }
 
   .nav-item:last-child {
