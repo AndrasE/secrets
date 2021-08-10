@@ -8,8 +8,88 @@
     </div>
 
     <div class="content-container about">
-  
-  <p>Coming soon . . .</p>
+
+  <p>Welcome to my secrets!🤐</p>
+  <p>
+This project took me a lot of effort and time, like a lot! <br>
+Although I found a lot of useful info in the Udemy Q&A section (some I implemented as well), many hours of research needed to do how to fix one bug after another. Luckily for google, stackoverflow (and some really helpful people on there) I can say I succeeded with this project! The research for solutions many times were just a basic trial an error, which although can be really time consuming should not be an underestimated method. There is a lot of joy in finding the right answer by yourself! <p>Anyways, enough of me, let’s get to business and list what I learnt during this project. This could be very useful for me and others in the future. If you here from Udemy, I welcome you 🙋‍♂️! You are at the right spot to find the answers you seek (hopefully); I will list the most common issues others and I encountered trying to make this webapp working online. Now here is my github repo`s link you feel free to check my code. If you go into the theme.js or the styles.css I’m sure you will find a lot of clashes and a lot of “not so elegant” solutions. I`m a rookie, I own them! ahahah</p>
+
+<p><strong>Contents will be the followings:</strong> <br>(feel free to click and jump to the section you need) </p>
+
+<p>
+<strong>Functionality-related </strong> <br>
+1. How to make to app ready to be uploaded to Heroku   <br>
+2. Upload to Heroku via Github <br>
+3. Suggestion for the mongoDB name/password  <br>
+4. Setting up Google/Facebook AOuth2 <br>
+5. Multiple Facebook/Google accounts issue  <br>
+6. Users with multiple secrets <br>
+7. Delete a secret <br>
+8. Other issues <br>
+<br>
+<strong>Design-related </strong> <br>
+1. The design/navbar <br>
+2. SVGs <br>
+3. Flexbox <br>
+4. Animations <br>
+5. Delay <br>
+6. Swipe <br>
+7.Desktop/mobile version @media <br>
+<br>
+X. Few missing features, few more words
+</p>
+
+<br>
+<br>
+
+<p><strong>How to make to app ready to be uploaded to Heroku</strong></p>
+<p>1. Before we are pushing anything anywhere, we need change it from localhost where the app will listen.</p>
+<script src="https://gist.github.com/ritualjoint/5483c563a506b4b1d9c1190c5e444f59.js"></script>
+<p>2.Change from localDB to onlineDB</p>
+<script src="https://gist.github.com/ritualjoint/e34b7e663c27f725ac8b5375f015db37.js"></script>
+<p>3.	Add Procfile for Heroku so know what to do the project. <br> In CLI cd into folder, touch Procfile, start Procfile, write node app.js, save.</p>
+<p>4. Edit packadge.json. Add extra lines:
+<script src="https://gist.github.com/ritualjoint/1e4a67c48064a5924d8a5a6dc1b2c0ba.js"></script>
+<p>5. Add .gitignore-file so you won’t push unnecessary stuffs online such: /node_modules, npm-debug.log, DS_Store, /*.env ... </p>
+<p>6. Add environmental variables to Heroku.<br> Create empty app, go settings, reveal config vars. Add the environmental variables there. </p>
+
+<p><strong>Upload App to Heroku via Github</strong></p>
+<p>The app should be ready to be uploaded. What I like to do is to push it to GitHub and in Heroku I connect to my GitHub repo and enable automatic deployments. It massively helps if you doing trial and error. Some point I had over 100+ commits doing trial and error, lol. Love it, only takes like 30 sec to redeploy the app.</p>
+<p>1.	Create empty repo on github. <br>
+2.	In CLI cd to the project folder<br>
+3.	Git add . <br>
+4.	Git commit -m “initial commit” <br>
+5.	Git push https://github.com/YOURACCOUNT/YOURREPO.git <br>
+6.	Go Heroku and like I said, find the repo and deploy it. <br></p>
+
+<p><strong>Suggestion for the mongoDB name/password</strong></p>
+<p>I have a suggestion to make regarding the mongoDB password in the app.js. I rather used the environmental variable to store this info. I don`t think it’s a good idea to have it online exposed especially if you use the same or similar password to all the sites.😬 So instead: </p>
+<script src="https://gist.github.com/ritualjoint/74c48eeccbd29c00c9147d1e0b99c51b.js"></script>
+
+<p><strong>Google/Facebook AOuth2 settings</strong></p>
+<p>Now the project is online, but obviously the Google and Facebook AOuth won`t work. Setting up the Facebook API especially was a biatch.🤬 I spent tons of time to make it happen.
+Here is my app`s setting for both google and facebook API.I think it helps a lot to check it over to yours as it does matter if https, http, www or just url without all these.<br>
+<a href="https://www.dropbox.com/s/9jrni6o3u22bvpz/googleAuth-settings.png?dl=0"><strong>google</strong>   &nbsp;
+</a> <a href="https://www.dropbox.com/s/sbg3w9bgj6tlebc/fbAuth1-settings.png?dl=0"><strong>facebook1</strong></a>   &nbsp;
+<a href="https://www.dropbox.com/s/kdofyacio8yivbb/fbAuth2-settings.png?dl=0"><strong>facebook2</strong></a><br></p>
+
+<p>The call back URL will need to be changed in app.js according to whatever your app`s url is.</p>
+<script src="https://gist.github.com/ritualjoint/ae8f943e9e2356ab32ba61496c88b07d.js"></script>
+
+<p><strong>Multiple Facebook/Google accounts issue</strong></p>
+<p>Multiple Facebook/Google accounts unable to register just yet to the website. It will return and interval server error message. I spent some time to understand the issue and now I sort of getting it. The problem is the schema and the how mongoDB handling our collection.
+const userSchema = new mongoose.Schema({
+  username: String,  this where the problem is
+  password: String,
+  googleId: String,
+  facebookId: String,
+  secret: String
+});
+
+Now if a new user register with email and password the username and password will be added to the DB. But if we are using Google/Facebook to log in the username will be empty or null. Now mondoDB won’t be happy about it as it will try to skip the partially indexed collections or even refuse to store it. I`m not 100% sure for the reason for it, but I read something about that it will take memory, so only let one NULL value to be existed in the db. You can read on it on Spare Indexes, Partial Indexes and Memory Usage in Index Builds. I was not completely competent how to overcome this issue and how to change the db`s setup. There must be a way that you are able to set up mondoDB that this NULL or empty string wouldn`t create this issue. I tried a few things, I created a random number 1-10000 and made it to a string and every time someone used Google/Facebook Auoth to log in I just popped into the field username: “googlelogin” +  randomNumber so the field won`t be empty. It worked, but I only could log in with two accounts. 🤣 The reason is that the random number will remained the same unless I restarted the app.js. Of course, it could overcome this adding the const randomNumber somewhere else, so it resets or what, but while I was trying to fix it, I figured a not elegant, but actually an easy solution for the whole problem. I anyway need to store the googleId or facebookId, so why don`t I just add it to the username section too. It will be unique and mondoDB won`t have NULL or empty string indexes. It`s working perfectly fine! Not an elegant solution but working!
+</p>
+
+
 
 
       <div class="button-container">

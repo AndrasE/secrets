@@ -81,12 +81,6 @@ function delete2ButtonTimeoutFunction() {
   }, 850);
 };
 
-function moreButtonTimeoutFunction() {
-  setTimeout(function() {
-    window.location.href = "/about2";
-  }, 850);
-};
-
 function facebookButtonTimeoutFunction() {
   setTimeout(function() {
     window.location.href = "/auth/facebook";
@@ -104,6 +98,20 @@ function logoutButtonTimeoutFunction() {
     window.location.href = "/logout3";
   }, 850);
 };
+
+function moreButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "/about2";
+  }, 850);
+};
+
+
+function contactButtonTimeoutFunction() {
+  setTimeout(function() {
+    window.location.href = "https://www.instagram.com/ritual.joint/";
+  }, 850);
+};
+
 
 
 //navbar timeoutfunctions with add class animation scale in css//

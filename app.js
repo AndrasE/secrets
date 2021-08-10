@@ -306,17 +306,16 @@ app.post("/login", function(req, res) {
     password: req.body.passport
   });
 
-  req.login(user, function(err) {
+  req.login(user, function(err){
     if (err) {
       console.log(err);
     } else {
-      passport.authenticate("local")(req, res, function() {
+      passport.authenticate("local", { failureRedirect: '/login'}) (req,res, function(){
         res.redirect("/secrets");
       })
     }
   })
 });
-
 
 let port = process.env.PORT;
 if (port == null || port == "") {
