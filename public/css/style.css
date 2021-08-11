@@ -58,7 +58,7 @@ hr {
 }
 
 hr:hover {
-  transition: 600ms linear;
+  -webkit-transition: 600ms linear;
   width: 50%
 }
 
@@ -300,6 +300,8 @@ display: block;
 display: block;
 }
 
+
+
  /***** media queries:  *****/
 
 /* Small screens */
@@ -312,6 +314,12 @@ display: block;
   .navbar {
     width: 3rem;
   }
+
+.code {
+margin: auto;
+max-width: 150px;
+padding: 1rem;
+}
 
 .nav-link svg {
   width: 2rem;
@@ -423,6 +431,11 @@ p {
   text-align: justify;
 }
 
+.code {
+max-width: inherit;
+margin: auto;
+}
+
   .navbar {
     width: 6rem;
   }
@@ -430,6 +443,10 @@ p {
   .navbar:hover {
     width: 14rem;
   }
+
+  .main-content {
+min-width: 200px;
+}
 
   .nav-link svg {
     width: 2rem;
