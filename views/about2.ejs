@@ -41,15 +41,16 @@ not be an underestimated method. There is a lot of joy in finding the right answ
 8. Other issues <br>
 <br>
 <strong>Design-related </strong> <br>
-1. The design/navbar <br>
+1. Design and navbar <br>
 2. SVGs <br>
 3. Flexbox <br>
 4. Animations <br>
-5. Delay <br>
+5. Delays <br>
 6. Swipe <br>
-7.Desktop/mobile version @media <br>
+7. Desktop/mobile version @media <br>
+8. Safari (the pain!)
 <br>
-X. Few missing features, few more words
+X. Few more words
 </p>
 
 <br>
@@ -168,6 +169,119 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
   to achieve certain things a lot will be a routine based on exparinace. Being new to this, sometimes first you put the plate in the microvawe and once it`s ready you take it out
   putting the food on top and expecting the meal to be worm. I had a lot of like: 😐 Hmm, yeah looking back, my expectations and the logic behing it were so off or even plain stupid!
   Daddy chill!
+</p>
+<br>
+<p><strong>Design and Navbar</strong></p>
+<p>I liked the app but not the design. This go from buttons to buttons just won’t cut it in real life.
+  Press here, press there, ain`t nobody got time for that!
+I follow a few cool guys on YouTube and I came across a simple navbar design which doesn’t include bootsrap.
+<a href="https://www.youtube.com/c/Fireship/about"><strong>Fireship.io</strong></a>🔥 <== Make sure you check the dude out, really helpful stuff!
+</p>
+<br>
+<p><strong>SVGs</strong></p>
+<p>I pulled off the guy`s (I meantioned above) GitHub repo and started to play around with the codes.
+  Soon enough I learnt that I need to overcome a lot of issues. The design and the animations were awesome,
+  but I don’t have FontAwesome-Pro neither 99$ a year to change the icons to the set I think would be suitable for the app.
+  I started to play around with random Svg`s. Mostly from FontAwesome, but some from somewhere else and again some of it
+  needed a touch with Photoshop. Once it was done, I found a great place edit and copy the SVG`s path so I could implement
+  it in the navbar. <a href="https://editor.method.ac/"><strong>Method Draw Vector Editor</strong></a> <== Totally the best so far!
+  So started to add these paths to the navbar, looked cool.😎
+</p>
+<br>
+<p><strong>Flexbox</strong></p>
+<p>Fireship.io didn`t use Bootsrap, so i started to follow his path. I created my own little divs to hold the content.
+  Its very easy to be honest as in this case the content is simple.
+  If I need to do a grid or something more complex I probably would have gone with bootsrap.
+  But I think now I prefer this method as in the past I kinda had problems with overwriting classes,
+  obviously to use BS properly there is a learning curve to it. Now I want to understand the basics,
+  not figuring out what was coded in the SCSS. Better to learn from the ground up I think. Don`t get me wrong
+i have nothing against BS they are handy as it can come, just occasianly i got frustrated that i couldn`t right away
+do what i wanted and had to invest more time into research. Either way it ended up being a lot of research so im not sure if i gained anything more than learning pure CSS.
+</p>
+<br>
+<p><strong>Animations</strong></p>
+<p>I really like the animation of the original navbar but started to play around and find other options to manipulate things.
+   I came up with the key🔑 rotating while the navbar opens, now I’m pretty proud of it, I think looks super dope. While I was looking on it,
+  I started to think maybe there are other ways I could implement more this little extras for the app. </p>
+  <p>I realised would be a great touch to reuse some of the svg and if not necessary to have svgs just use font-awesome basic fa fab classes … .
+    That’s how I came up with the rotating icons once you click on the button. </p>
+<br>
+    <p><strong>Delays</strong></p>
+<p>The buttons looks cool and stuff, but if you hit submit it will redirect you right away so wont wait the animation to finish.
+   I overcome on this by adding on the html side onClick()-functions which are stored in the theme.js. It took a bit of a research how to do this, but ended up solving the issue.</p>
+
+<div class="code">
+  <script src="https://gist.github.com/ritualjoint/2c17b67ad71b7a237859f8308dbf0b52.js"></script>
+</div>
+
+<p>In many cases (login/register/delete) we dealing with forms. The button delay could be applied here to,
+  but i found a suggestion online from Stackoverflow to set up an eventlistener for the forms and create the delay that way. It makes sense as pressung the button
+wouldn`t just redirest you to an href you need to submit the input of the forms. As the html side the action and method already given, the previous button-delay functions would just
+make thing more complicated. </p>
+
+<div class="code">
+  <script src="https://gist.github.com/ritualjoint/f1ec8ab8f2e1ae0cf791044bd171b4b2.js"></script>
+</div>
+
+<p>I played around with the app on mobile and I didn`t like how it reacts to click on the navbar as it just was way too quick.
+  Kinda missed the confirmation of my tap. So I added delay there too (only a few ms) and scale the content of the navbar before its redirect. It looks cool I think, it a nice touch.
+In order to acive this, i had to setup another function. It`s add an eventlistener to certain ID`s
+and when clicked add a new CSS-class with a timout. On the CSS side the class set to scale the content. </p>
+<div class="code">
+  <script src="https://gist.github.com/ritualjoint/3895759f22875f70d2523c26f3ad9bec.js"></script>
+</div>
+<br>
+
+<p><strong>Slide</strong></p>
+<p>It’s kinda easy to adding sliding effect on both the main content div and the navbar.
+I also added z-index to the navbar so wont bother the main-content on small screen or vica versa.
+</p>
+<div class="code">
+<script src="https://gist.github.com/ritualjoint/c28e2b994df099c21fc29fdd8719de82.js"></script>
+</div>
+<br>
+
+<p><strong>Swipe</strong></p>
+<p>App was looking good, but I didn’t want no click on navbar to open and close it.
+  Pretty much everyone uses mobiles first nowdays, no-swipe = no-fun. I started to dig how to implement this.
+  Now its very complicated if I wanted to do it from scratch, I ended up chosing hammer.js to do the labour for me.
+  Although I didn`t know what I’m doing, but with help of their CodePen I was able to figure it out myself.
+  It introduced a number of issues for me, as the navbar only opened never closed and many others but eventually I figured an other way out.
+  Now its slides, and how it slides! Lol</p>
+<div class="code">
+  <script src="https://gist.github.com/ritualjoint/30b4fb316c94159ec6025bd6649d08c4.js"></script>
+</div>
+<br>
+
+<p><strong>Mobile/Desktop version with @media query</strong></p>
+<p>It was a pain but regarding. I’m sure many of my codes are not necessary in
+  places or even duplicates.🙈 I think if I would start over, I would right away start to focus on mobile before anything else.
+  Or start writing the css in the way that I dissect the codes when to apply certan formatting. Once it was a messy CSS, it was really hard to dig out what I need to include in
+@media (max-width: 600px)
+or
+@media (min-width: 600px)
+
+There were a tons of duplicates, useless classes, and even now If I read it, I defo find something stupid.
+What I learnt here is that maybe I was rushing to sort out one thing after another, creating mess is never the way forward. Have a tidy code will help a lot when comes to find answers.
+It’s like ladies-bag… Impossible to find anything.😋
+</p>
+<br>
+<p><strong>Safari</strong></p>
+<p>At this point the app is fully functional. It works both PC/Mobile and responsively. Mayday! Nope, i just lied. Its pretty janky on Safari at the moment.
+The problem is that the CSS in regards to transitions is worded differently for Safari and Chrome. It means the animation will flikker and just look complete garbage on iMachines.
+This is something i not yet able to fix, but i have to as the half of the population uses it. My codes are fine, but i need to add a few Webkits for it to work nice on them too.
+I tried a few hours, but couln`t yet make it to happen and as i dont have any iMachine at home i need to yet figure out how to fix this. I think what im going to do is
+emulate the issue online and ask someone more clever. Oc trial and error eventually will crack it, but after a few hours oc adding and removing Webkits i got pissed off lol.
+It will get fixed soon! Promise!</p>
+<br>
+
+<p><strong>Just a few more words</strong></p>
+<p>I had a lot fun (and frustration) creating this app. Some point I wasn`t even able to sleep as I tried to figure out where my code doesn`t work. I think it’s sometimes better just to leave it for a day. When you tired of trying, don’t need try anymore; your efforts will be just purely wasted! Sometimes I spent 4 hours to figure out I am missing a fcking comma somewhere! I think I somehow need to find the balance, instead of stare into nothing (not even the screen really), with no braincells anymore, just time to stand up and do something else. Word!
+<br><br>
+If you still here and reading my little struggle-diary, hey its very nice of you!
+I hope you enjoyed it, see you next time hopefully not in the too distant future!
+<br><br>
+Goodbye! 😚
 </p>
 
 
