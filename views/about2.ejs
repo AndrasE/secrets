@@ -31,32 +31,31 @@ not be an underestimated method. There is a lot of joy in finding the right answ
 
 <p>
 <strong>Functionality-related </strong> <br>
-1. How to make to app ready to be uploaded to Heroku   <br>
-2. Upload to Heroku via Github <br>
-3. Suggestion for the mongoDB name/password  <br>
-4. Setting up Google/Facebook AOuth2 <br>
-5. Multiple Facebook/Google accounts issue  <br>
-6. Users with multiple secret and "empty" secrets<br>
-7. Delete a secret <br>
-8. Other issues <br>
+1. <a href="#Functionality1">How to make to app ready to be uploaded to Heroku</a> <br>
+2. <a href="#Functionality2">Upload to Heroku via Github</a> <br>
+3. <a href="#Functionality3">Suggestion for the mongoDB name/password</a> <br>
+4. <a href="#Functionality4">Setting up Google/Facebook AOuth2</a> <br>
+5. <a href="#Functionality5">Multiple Facebook/Google accounts issue </a> <br>
+6. <a href="#Functionality6">Users with multiple secret and "empty" secrets</a><br>
+7. <a href="#Functionality7">Delete a secret, not the whole array</a> <br>
+8. <a href="#Functionality8">Other issues</a> <br>
 <br>
 <strong>Design-related </strong> <br>
-1. Design and navbar <br>
-2. SVGs <br>
-3. Flexbox <br>
-4. Animations <br>
-5. Delays <br>
-6. Swipe <br>
-7. Desktop/mobile version @media <br>
-8. Safari (the pain!)
-<br>
-X. Few more words
+1. <a href="#Design1">Design and navbar</a> <br>
+2. <a href="#Design2">SVGs</a> <br>
+3. <a href="#Design3">Flexbox</a> <br>
+4. <a href="#Design4">Animations</a> <br>
+5. <a href="#Design5">Delays</a> <br>
+6. <a href="#Design6">Swipe</a> <br>
+7. <a href="#Design7">Desktop/mobile version with @media query</a> <br>
+8. <a href="#Design8">Safari (pain!) </a> <br>
+X. <a href="#DesignX">Few more words</a>
 </p>
 
 <br>
 <br>
 
-<p><strong>How to make to app ready to be uploaded to Heroku</strong></p>
+<p id="Functionality1"><strong>How to make to app ready to be uploaded to Heroku</strong></p>
 <p>1. Before we are pushing anything anywhere, we need change it from localhost where the app will listen.</p>
 <div class="code">
   <script src="https://gist.github.com/ritualjoint/5483c563a506b4b1d9c1190c5e444f59.js"></script>
@@ -73,7 +72,7 @@ X. Few more words
 <p>5. Add .gitignore-file so you won’t push unnecessary stuffs online such: /node_modules, npm-debug.log, DS_Store, /*.env ... </p>
 <p>6. Add environmental variables to Heroku.<br> Create empty app, go settings, reveal config vars. Add the environmental variables there. </p>
 <br>
-<p><strong>Upload App to Heroku via Github</strong></p>
+<p id="Functionality2"><strong>Upload App to Heroku via Github</strong></p>
 <p>The app should be ready to be uploaded. What I like to do is to push it to GitHub
   and in Heroku I connect to my GitHub repo and enable automatic deployments.
   It massively helps if you doing trial and error. Some point I had over 100+ commits doing trial and error, lol.
@@ -85,7 +84,7 @@ X. Few more words
 5.	Git push https:// github.com/ YOURACCOUNT/ YOURREPO.git <br>
 6.	Go Heroku and like I said, find the repo and deploy it. </p>
 <br>
-<p><strong>Suggestion for the mongoDB name/password</strong></p>
+<p id="Functionality3"><strong>Suggestion for the mongoDB name/password</strong></p>
 <p>I have a suggestion to make regarding the mongoDB password in the app.js.
   I rather used the environmental variable to store this info.
   I don`t think it’s a good idea to have it online exposed especially if you use the same or similar password to all the sites.😬 So instead: </p>
@@ -93,7 +92,7 @@ X. Few more words
 <script src="https://gist.github.com/ritualjoint/74c48eeccbd29c00c9147d1e0b99c51b.js"></script>
 </div>
 <br>
-<p><strong>Google/Facebook AOuth2 settings</strong></p>
+<p id="Functionality4"><strong>Google/Facebook AOuth2 settings</strong></p>
 <p>Now the project is online, but obviously the Google and
   Facebook AOuth won`t work. Setting up the Facebook API especially was a biatch.🤬 I spent tons of time to make it happen.
 Here is my app`s setting for both google and facebook API.I think it helps a lot to check it over to yours as it does matter
@@ -107,7 +106,7 @@ if https, http, www or just url without all these.<br>
 <script src="https://gist.github.com/ritualjoint/ae8f943e9e2356ab32ba61496c88b07d.js"></script>
 </div>
 <br>
-<p><strong>Multiple Facebook/Google accounts issue</strong></p>
+<p id="Functionality5"><strong>Multiple Facebook/Google accounts issue</strong></p>
 <p>Multiple Facebook/Google accounts unable to register just yet to the website. It will return and interval server error message.
   I spent some time to understand the issue and now I sort of getting it. The problem is the schema and the how mongoDB handling our collection. </p>
 <div class="code">
@@ -133,7 +132,7 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
 </div>
 <br>
 
-<p><strong>Users with multiple secret and "empty" secrets</strong></p>
+<p id="Functionality6"><strong>Users with multiple secret and "empty" secrets</strong></p>
 <p>At this point every user only can have one secret. If you try to add a new one it will simply overwrite it.
   If you change the schema from String to Array is a good start. Now we can push the new secret to the array,
   the only problem will be that it won`t occur as separate secrets. On the html site in the ejs we need to call a for each method.
@@ -150,13 +149,13 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
 <p>Now we can have multiple secrets displayed as separate html without having gaps spamming the screen ruining the flow of texts. </p>
 <br>
 
-<p><strong>Delete a secret, not the whole array</strong></p>
+<p id="Functionality7"><strong>Delete a secret, not the whole array</strong></p>
 <p>We need to be able to separate the specific secret from the array. Splice and resave array! </p>
 <div class="code">
   <script src="https://gist.github.com/ritualjoint/6cd80cb0aa5aea18278e20c9970fa16d.js"></script>
 </div>
 <br>
-<p><strong>Other issues</strong></p>
+<p id="Functionality8"><strong>Other issues</strong></p>
 <p>I covered the basic functions of the app, we have a lot of issues that can arouse still.
    What if someone try to login without actually putting anything in the input box? What if someone will try to log in while already been logged in. Registering twice the same? Unauthorized?
   Bad requests? Etc.  There are not that hard to overcome by these, so I won`t cover it here. I created a few separate ejs files to answer most of this sort of requests,
@@ -171,14 +170,14 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
   Daddy chill!
 </p>
 <br>
-<p><strong>Design and Navbar</strong></p>
+<p id="Design1"><strong>Design and Navbar</strong></p>
 <p>I liked the app but not the design. This go from buttons to buttons just won’t cut it in real life.
   Press here, press there, ain`t nobody got time for that!
 I follow a few cool guys on YouTube and I came across a simple navbar design which doesn’t include bootsrap.
 <a href="https://www.youtube.com/c/Fireship/about"><strong>Fireship.io</strong></a>🔥 <== Make sure you check the dude out, really helpful stuff!
 </p>
 <br>
-<p><strong>SVGs</strong></p>
+<p id="Design2"><strong>SVGs</strong></p>
 <p>I pulled off the guy`s (I meantioned above) GitHub repo and started to play around with the codes.
   Soon enough I learnt that I need to overcome a lot of issues. The design and the animations were awesome,
   but I don’t have FontAwesome-Pro neither 99$ a year to change the icons to the set I think would be suitable for the app.
@@ -188,7 +187,7 @@ I follow a few cool guys on YouTube and I came across a simple navbar design whi
   So started to add these paths to the navbar, looked cool.😎
 </p>
 <br>
-<p><strong>Flexbox</strong></p>
+<p id="Design3"><strong>Flexbox</strong></p>
 <p>Fireship.io didn`t use Bootsrap, so i started to follow his path. I created my own little divs to hold the content.
   Its very easy to be honest as in this case the content is simple.
   If I need to do a grid or something more complex I probably would have gone with bootsrap.
@@ -199,14 +198,14 @@ i have nothing against BS they are handy as it can come, just occasianly i got f
 do what i wanted and had to invest more time into research. Either way it ended up being a lot of research so im not sure if i gained anything more than learning pure CSS.
 </p>
 <br>
-<p><strong>Animations</strong></p>
+<p id="Design4"><strong>Animations</strong></p>
 <p>I really like the animation of the original navbar but started to play around and find other options to manipulate things.
    I came up with the key🔑 rotating while the navbar opens, now I’m pretty proud of it, I think looks super dope. While I was looking on it,
   I started to think maybe there are other ways I could implement more this little extras for the app. </p>
   <p>I realised would be a great touch to reuse some of the svg and if not necessary to have svgs just use font-awesome basic fa fab classes … .
     That’s how I came up with the rotating icons once you click on the button. </p>
 <br>
-    <p><strong>Delays</strong></p>
+<p id="Design5"><strong>Delays</strong></p>
 <p>The buttons looks cool and stuff, but if you hit submit it will redirect you right away so wont wait the animation to finish.
    I overcome on this by adding on the html side onClick()-functions which are stored in the theme.js. It took a bit of a research how to do this, but ended up solving the issue.</p>
 
@@ -241,7 +240,7 @@ I also added z-index to the navbar so wont bother the main-content on small scre
 </div>
 <br>
 
-<p><strong>Swipe</strong></p>
+<p id="Design6"><strong>Swipe</strong></p>
 <p>App was looking good, but I didn’t want no click on navbar to open and close it.
   Pretty much everyone uses mobiles first nowdays, no-swipe = no-fun. I started to dig how to implement this.
   Now its very complicated if I wanted to do it from scratch, I ended up chosing hammer.js to do the labour for me.
@@ -253,7 +252,7 @@ I also added z-index to the navbar so wont bother the main-content on small scre
 </div>
 <br>
 
-<p><strong>Mobile/Desktop version with @media query</strong></p>
+<p id="Design7"><strong>Mobile/Desktop version with @media query</strong></p>
 <p>It was a pain but regarding. I’m sure many of my codes are not necessary in
   places or even duplicates.🙈 I think if I would start over, I would right away start to focus on mobile before anything else.
   Or start writing the css in the way that I dissect the codes when to apply certan formatting. Once it was a messy CSS, it was really hard to dig out what I need to include in
@@ -266,7 +265,7 @@ What I learnt here is that maybe I was rushing to sort out one thing after anoth
 It’s like ladies-bag… Impossible to find anything.😋
 </p>
 <br>
-<p><strong>Safari</strong></p>
+<p id="Design8"><strong>Safari</strong></p>
 <p>At this point the app is fully functional. It works both PC/Mobile and responsively. Mayday! Nope, i just lied. Its pretty janky on Safari at the moment.
 The problem is that the CSS in regards to transitions is worded differently for Safari and Chrome. It means the animation will flikker and just look complete garbage on iMachines.
 This is something i not yet able to fix, but i have to as the half of the population uses it. My codes are fine, but i need to add a few Webkits for it to work nice on them too.
@@ -275,7 +274,7 @@ emulate the issue online and ask someone more clever. Oc trial and error eventua
 It will get fixed soon! Promise!</p>
 <br>
 
-<p><strong>Just a few more words</strong></p>
+<p id="DesignX"><strong>Just a few more words</strong></p>
 <p>I had a lot fun (and frustration) creating this app. Some point I wasn`t even able to sleep as I tried to figure out where my code doesn`t work. I think it’s sometimes better just to leave it for a day. When you tired of trying, don’t need try anymore; your efforts will be just purely wasted! Sometimes I spent 4 hours to figure out I am missing a fcking comma somewhere! I think I somehow need to find the balance, instead of stare into nothing (not even the screen really), with no braincells anymore, just time to stand up and do something else. Word!
 <br><br>
 If you still here and reading my little struggle-diary, hey its very nice of you!
