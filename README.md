@@ -11,3 +11,6 @@ faced with examples and references.
 I hope you find it useful!
 
 Thank you, code safe! 💻
+
+
+ps.: If you want to see the deployment please be patient the inital load time can take 1-3 seconds after that the server will ramp up! :) 
