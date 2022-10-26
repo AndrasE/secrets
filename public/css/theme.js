@@ -108,7 +108,7 @@ function moreButtonTimeoutFunction() {
 
 function contactButtonTimeoutFunction() {
   setTimeout(function() {
-    window.location.href = "https://andrasegyed.netlify.app/";
+    window.open("https://andrasegyed.netlify.app/",`_blank`) ;
   }, 850);
 };
 
