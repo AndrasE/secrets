@@ -108,7 +108,7 @@ function moreButtonTimeoutFunction() {
 
 function contactButtonTimeoutFunction() {
   setTimeout(function() {
-    window.location.href = "https://www.instagram.com/ritual.joint/";
+    window.location.href = "https://andrasegyed.netlify.app/";
   }, 850);
 };
 

@@ -58,6 +58,7 @@ hr {
 }
 
 hr:hover {
+  transition: 600ms linear;
   -webkit-transition: 600ms linear;
   width: 50%
 }
@@ -102,7 +103,7 @@ a {
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 600ms ease;
-  overflow: scroll;
+  overflow: hidden;
   top: 0;
   height: 100vh;
     z-index: 1;
@@ -175,13 +176,13 @@ a {
 
   .main-content {
     text-align: center;
-    margin: auto;.
+    margin: auto;
     padding-right: min(50px, 5%);
     padding-right: max(15px, 5%);
     padding-right: clamp(15px, 5%, 50px);
     padding-left: min(50px, 5%);
     padding-left: max(15px, 5%);
-    padding-left: ;: clamp(15px, 5%, 50px);
+    padding-left: clamp(15px, 5%, 50px);
     display: inline-block;
   }
 
@@ -437,11 +438,11 @@ margin: auto;
 }
 
   .navbar {
-    width: 6rem;
+    width: 5rem;
   }
 
   .navbar:hover {
-    width: 14rem;
+    width: 13rem;
   }
 
   .main-content {
