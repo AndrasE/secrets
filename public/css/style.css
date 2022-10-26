@@ -396,7 +396,7 @@ select.form{
 
 /* navbar swipe effect :) */
   .expand-nav {
-    width: 10rem;
+    width: 11rem;
   }
 
   .expand-nav .logo svg {
@@ -483,7 +483,7 @@ min-width: 200px;
 
   /* navbar swipe effect :) */
     .expand-nav {
-      width: 14rem;
+      width: 13rem;
     }
 
     .expand-nav .logo svg {
