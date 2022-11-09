@@ -103,14 +103,14 @@ if https, http, www or just url without all these.<br>
 
 <p>The call back URL will need to be changed in app.js according to whatever your app`s url is.</p>
 <div class="code">
-<script src="https://gist.github.com/AndrasE/ae8f943e9e2356ab32ba61496c88b07d.js"></script>
+<script src="https://gist.github.com/ritualjoint/ae8f943e9e2356ab32ba61496c88b07d.js"></script>
 </div>
 <br>
 <p id="Functionality5"><strong>Multiple Facebook/Google accounts issue</strong></p>
 <p>Multiple Facebook/Google accounts unable to register just yet to the website. It will return and interval server error message.
   I spent some time to understand the issue and now I sort of getting it. The problem is the schema and the how mongoDB handling our collection. </p>
 <div class="code">
-  <script src="https://gist.github.com/AndrasE/60c391a4c1a661b4e74cf72e1be58436.js"></script>
+  <script src="https://gist.github.com/ritualjoint/a6505b84d7be6effb4200807b096514d.js"></script>
 </div>
 <p>
 If a new user register with email and password the username and password will be added to the DB. But if we are using Google/Facebook to log in the username will be empty or null.
@@ -138,7 +138,7 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
   the only problem will be that it won`t occur as separate secrets. On the html site in the ejs we need to call a for each method.
 </p>
 <div class="code">
-  <script src="https://gist.github.com/AndrasE/f154445b1d2a870997e6c93d51f446e2.js"></script>
+  <script src="https://gist.github.com/ritualjoint/f154445b1d2a870997e6c93d51f446e2.js"></script>
 </div>
 <p>Now that we are working with an array, thing have changed. We don`t want to display empty or NULL secrets is someone just push submit without
   actually putting anything in the input box. It just doesn`t look good on the screen later on.
