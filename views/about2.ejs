@@ -58,16 +58,16 @@ X. <a href="#DesignX">Few more words</a>
 <p id="Functionality1"><strong>How to make to app ready to be uploaded to Heroku</strong></p>
 <p>1. Before we are pushing anything anywhere, we need change it from localhost where the app will listen.</p>
 <div class="code">
-  <script src="https://gist.github.com/AndrasE/5483c563a506b4b1d9c1190c5e444f59.js"></script>
+  <script src="https://gist.github.com/AndrasE/e34b7e663c27f725ac8b5375f015db37.js"></script>
 </div>
 <p>2.Change from localDB to onlineDB</p>
 <div class="code">
-<script src="https://gist.github.com/AndrasE/e34b7e663c27f725ac8b5375f015db37.js"></script>
+<script src="https://gist.github.com/ritualjoint/e34b7e663c27f725ac8b5375f015db37.js"></script>
 </div>
 <p>3.	Add Procfile for Heroku so know what to do the project. <br> In CLI cd into folder, touch Procfile, start Procfile, write node app.js, save.</p>
 <p>4. Edit packadge.json. Add extra lines:</p>
 <div class="code">
-<script src="https://gist.github.com/AndrasE/1e4a67c48064a5924d8a5a6dc1b2c0ba.js"></script>
+<script src="https://gist.github.com/ritualjoint/1e4a67c48064a5924d8a5a6dc1b2c0ba.js"></script>
 </div>
 <p>5. Add .gitignore-file so you won’t push unnecessary stuffs online such: /node_modules, npm-debug.log, DS_Store, /*.env ... </p>
 <p>6. Add environmental variables to Heroku.<br> Create empty app, go settings, reveal config vars. Add the environmental variables there. </p>
@@ -89,7 +89,7 @@ X. <a href="#DesignX">Few more words</a>
   I rather used the environmental variable to store this info.
   I don`t think it’s a good idea to have it online exposed especially if you use the same or similar password to all the sites.😬 So instead: </p>
 <div class="code">
-<script src="https://gist.github.com/AndrasE/74c48eeccbd29c00c9147d1e0b99c51b.js"></script>
+<script src="https://gist.github.com/ritualjoint/74c48eeccbd29c00c9147d1e0b99c51b.js"></script>
 </div>
 <br>
 <p id="Functionality4"><strong>Google/Facebook AOuth2 settings</strong></p>
