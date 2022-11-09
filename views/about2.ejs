@@ -58,16 +58,16 @@ X. <a href="#DesignX">Few more words</a>
 <p id="Functionality1"><strong>How to make to app ready to be uploaded to Heroku</strong></p>
 <p>1. Before we are pushing anything anywhere, we need change it from localhost where the app will listen.</p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/5483c563a506b4b1d9c1190c5e444f59.js"></script>
+  <script src="https://gist.github.com/AndrasE/5483c563a506b4b1d9c1190c5e444f59.js"></script>
 </div>
 <p>2.Change from localDB to onlineDB</p>
 <div class="code">
-<script src="https://gist.github.com/ritualjoint/e34b7e663c27f725ac8b5375f015db37.js"></script>
+<script src="https://gist.github.com/AndrasE/e34b7e663c27f725ac8b5375f015db37.js"></script>
 </div>
 <p>3.	Add Procfile for Heroku so know what to do the project. <br> In CLI cd into folder, touch Procfile, start Procfile, write node app.js, save.</p>
 <p>4. Edit packadge.json. Add extra lines:</p>
 <div class="code">
-<script src="https://gist.github.com/ritualjoint/1e4a67c48064a5924d8a5a6dc1b2c0ba.js"></script>
+<script src="https://gist.github.com/AndrasE/1e4a67c48064a5924d8a5a6dc1b2c0ba.js"></script>
 </div>
 <p>5. Add .gitignore-file so you won’t push unnecessary stuffs online such: /node_modules, npm-debug.log, DS_Store, /*.env ... </p>
 <p>6. Add environmental variables to Heroku.<br> Create empty app, go settings, reveal config vars. Add the environmental variables there. </p>
@@ -89,7 +89,7 @@ X. <a href="#DesignX">Few more words</a>
   I rather used the environmental variable to store this info.
   I don`t think it’s a good idea to have it online exposed especially if you use the same or similar password to all the sites.😬 So instead: </p>
 <div class="code">
-<script src="https://gist.github.com/ritualjoint/74c48eeccbd29c00c9147d1e0b99c51b.js"></script>
+<script src="https://gist.github.com/AndrasE/74c48eeccbd29c00c9147d1e0b99c51b.js"></script>
 </div>
 <br>
 <p id="Functionality4"><strong>Google/Facebook AOuth2 settings</strong></p>
@@ -103,14 +103,14 @@ if https, http, www or just url without all these.<br>
 
 <p>The call back URL will need to be changed in app.js according to whatever your app`s url is.</p>
 <div class="code">
-<script src="https://gist.github.com/ritualjoint/ae8f943e9e2356ab32ba61496c88b07d.js"></script>
+<script src="https://gist.github.com/AndrasE/ae8f943e9e2356ab32ba61496c88b07d.js"></script>
 </div>
 <br>
 <p id="Functionality5"><strong>Multiple Facebook/Google accounts issue</strong></p>
 <p>Multiple Facebook/Google accounts unable to register just yet to the website. It will return and interval server error message.
   I spent some time to understand the issue and now I sort of getting it. The problem is the schema and the how mongoDB handling our collection. </p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/a6505b84d7be6effb4200807b096514d.js"></script>
+  <script src="https://gist.github.com/AndrasE/a6505b84d7be6effb4200807b096514d.js"></script>
 </div>
 <p>
 If a new user register with email and password the username and password will be added to the DB. But if we are using Google/Facebook to log in the username will be empty or null.
@@ -128,7 +128,7 @@ I figured a not elegant, but actually an easy solution for the whole problem. I 
 It will be unique and mondoDB won`t have NULL or empty string indexes. It`s working perfectly fine! Not an elegant solution but working!
 </p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/60c391a4c1a661b4e74cf72e1be58436.js"></script>
+  <script src="https://gist.github.com/AndrasE/60c391a4c1a661b4e74cf72e1be58436.js"></script>
 </div>
 <br>
 
@@ -138,13 +138,13 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
   the only problem will be that it won`t occur as separate secrets. On the html site in the ejs we need to call a for each method.
 </p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/f154445b1d2a870997e6c93d51f446e2.js"></script>
+  <script src="https://gist.github.com/AndrasE/f154445b1d2a870997e6c93d51f446e2.js"></script>
 </div>
 <p>Now that we are working with an array, thing have changed. We don`t want to display empty or NULL secrets is someone just push submit without
   actually putting anything in the input box. It just doesn`t look good on the screen later on.
   We can do this by either not letting it the app to post it and save it to the array, or just simple don`t let it display it. The issue is:</p>
   <div class="code">
-    <script src="https://gist.github.com/ritualjoint/56878dc07805f91328dfa2c7e924d504.js"></script>
+    <script src="https://gist.github.com/AndrasE/56878dc07805f91328dfa2c7e924d504.js"></script>
   </div>
 <p>Now we can have multiple secrets displayed as separate html without having gaps spamming the screen ruining the flow of texts. </p>
 <br>
@@ -152,7 +152,7 @@ It will be unique and mondoDB won`t have NULL or empty string indexes. It`s work
 <p id="Functionality7"><strong>Delete a secret, not the whole array</strong></p>
 <p>We need to be able to separate the specific secret from the array. Splice and resave array! </p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/6cd80cb0aa5aea18278e20c9970fa16d.js"></script>
+  <script src="https://gist.github.com/AndrasE/6cd80cb0aa5aea18278e20c9970fa16d.js"></script>
 </div>
 <br>
 <p id="Functionality8"><strong>Other issues</strong></p>
@@ -210,7 +210,7 @@ do what i wanted and had to invest more time into research. Either way it ended 
    I overcome on this by adding on the html side onClick()-functions which are stored in the theme.js. It took a bit of a research how to do this, but ended up solving the issue.</p>
 
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/2c17b67ad71b7a237859f8308dbf0b52.js"></script>
+  <script src="https://gist.github.com/AndrasE/2c17b67ad71b7a237859f8308dbf0b52.js"></script>
 </div>
 
 <p>In many cases (login/register/delete) we dealing with forms. The button delay could be applied here to,
@@ -219,7 +219,7 @@ wouldn`t just redirest you to an href you need to submit the input of the forms.
 make thing more complicated. </p>
 
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/f1ec8ab8f2e1ae0cf791044bd171b4b2.js"></script>
+  <script src="https://gist.github.com/AndrasE/f1ec8ab8f2e1ae0cf791044bd171b4b2.js"></script>
 </div>
 
 <p>I played around with the app on mobile and I didn`t like how it reacts to click on the navbar as it just was way too quick.
@@ -227,7 +227,7 @@ make thing more complicated. </p>
 In order to acive this, i had to setup another function. It`s add an eventlistener to certain ID`s
 and when clicked add a new CSS-class with a timout. On the CSS side the class set to scale the content. </p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/3895759f22875f70d2523c26f3ad9bec.js"></script>
+  <script src="https://gist.github.com/AndrasE/3895759f22875f70d2523c26f3ad9bec.js"></script>
 </div>
 <br>
 
@@ -236,7 +236,7 @@ and when clicked add a new CSS-class with a timout. On the CSS side the class se
 I also added z-index to the navbar so wont bother the main-content on small screen or vica versa.
 </p>
 <div class="code">
-<script src="https://gist.github.com/ritualjoint/c28e2b994df099c21fc29fdd8719de82.js"></script>
+<script src="https://gist.github.com/AndrasE/c28e2b994df099c21fc29fdd8719de82.js"></script>
 </div>
 <br>
 
@@ -248,7 +248,7 @@ I also added z-index to the navbar so wont bother the main-content on small scre
   It introduced a number of issues for me, as the navbar only opened never closed and many others but eventually I figured an other way out.
   Now its slides, and how it slides! Lol</p>
 <div class="code">
-  <script src="https://gist.github.com/ritualjoint/30b4fb316c94159ec6025bd6649d08c4.js"></script>
+  <script src="https://gist.github.com/AndrasE/30b4fb316c94159ec6025bd6649d08c4.js"></script>
 </div>
 <br>
 
