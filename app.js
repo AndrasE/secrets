@@ -89,7 +89,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "https://andras-secrets.cyclic.app/auth/facebook/secrets"
+    callbackURL: "https://sore-ruby-caterpillar-wrap.cyclic.app/facebook/secrets"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
