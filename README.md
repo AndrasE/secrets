@@ -1,5 +1,5 @@
 # secrets
-Facebook/Google/Email&amp;Password Authentication using Express, Ejs, Sessions with MongoDB as a backend
+Facebook/Google/Email&amp;Password Authentication using Express (sessions), Ejs with MongoDB as a backend
 
 Hi there 👋,
 
