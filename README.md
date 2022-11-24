@@ -1,4 +1,15 @@
-# secrets
+<p align="center">
+  <a href="https://crud-auth.netlify.app/" target="_blank" rel="noopener noreferrer">
+  <img src="https://github.com/AndrasE/crud-auth-and-fire/blob/main/public/logo-readme.png?raw=true">
+  </a>
+</p>
+
+<h3 align="center">
+  Full stack application using Ejs with MongoDB database & 
+  <br>
+  OAuth options with Express (sessions)
+</h3>
+
 Facebook/Google/Email&amp;Password Authentication using Express (sessions), Ejs with MongoDB as a backend
 
 Hi there 👋,
