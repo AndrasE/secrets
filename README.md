@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="https://app-secret.herokuapp.com/" target="_blank" rel="noopener noreferrer">
   <img src="https://github.com/AndrasE/secrets/blob/master/public/logo-readme.png?raw=true">
@@ -10,9 +11,9 @@
   OAuth options with Express (sessions)
 </h3>
 
-Facebook/Google/Email&amp;Password Authentication using Express (sessions), Ejs with MongoDB as a backend
+<br>
 
-Hi there 👋,
+## Hi there 👋
 
 While i was studying on udemy we finished a project which i intended to take further as i saw more potential. 
 I made a lot of changes to it, added a lot of animation and svg and bamm, here we are now! It took me a bit of effort, 
