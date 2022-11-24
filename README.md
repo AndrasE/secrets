@@ -14,17 +14,13 @@
 
 ## Hi there 👋
 
-While i was studying on udemy we finished a project which i intended to take further as i saw more potential. 
-I made a lot of changes to it, added a lot of animation and svg and bamm, here we are now! It took me a bit of effort, 
-but completed it. In the about section of the page you can read more about this project, difficulties i 
-faced with examples and references. 
+While I was doing my self-studies on Udemy I felt intrigued to take a project further as by using EJS with MongoDb user could interact with the App. I made a lot of changes to the original project; added authentications, animations and svgs with navbar and swipe functionalites and themes. It took me a bit of effort, but completed it. In the about section of the page you can read more about this project, difficulties i faced with examples and references. 
 
-I hope you find it useful!
+I hope you find it useful for your own project!
 
 Thank you, code safe! 💻
 
-
-ps.: If you want to see the deployment please be patient the inital load time can take 1-3 seconds after that the server will ramp up! :) 
+ps.: If you want to see the deployment it`s hosted on heroku eco-tier the server,it might take 2-3s to spin up, please be patient. 🐨
 
 
 ## Run 🚀
@@ -48,7 +44,7 @@ $ yarn add --dev myLib
 
 Add your own credentials:
 ```sh
-add own .env
+add own credentials or .env
 setup own google and facebook Apis
 ```
 Serving the app:
