@@ -1,4 +1,3 @@
-
 <p align="center">
   <a href="https://app-secret.herokuapp.com/" target="_blank" rel="noopener noreferrer">
   <img src="https://github.com/AndrasE/secrets/blob/master/public/logo-readme.png?raw=true">
