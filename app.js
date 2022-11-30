@@ -236,7 +236,7 @@ app.get("/logout3", function(req, res, next) {
     if (err) { 
       return next(err); 
       }
-    res.render("/bye");
+    res.redirect("/bye");
   });
 });
 
