@@ -8,6 +8,8 @@
   Full stack application using Ejs with MongoDB database & 
   <br>
   OAuth options with Express (sessions)
+  <br>
+  Animations & hammer.js
 </h3>
 
 <br>
