@@ -231,10 +231,15 @@ app.get("/logout", function(req, res) {
   };
 });
 
-app.get("/logout3", function(req, res) {
-  req.logout();
-  res.redirect("/");
+app.get("/logout3", function(req, res, next) {
+  req.logout(function(err) {
+    if (err) { 
+      return next(err); 
+      }
+    res.render("/bye");
+  });
 });
+
 
 app.get("/delete", function(req, res) {
   if (req.isAuthenticated()) {
