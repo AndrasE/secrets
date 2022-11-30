@@ -5,11 +5,11 @@
   </a>
 </p>
 <h3 align="center">
-  Full stack application using Ejs with MongoDB database & 
+  Full stack application using Ejs with MongoDB database
   <br>
   OAuth options with Express (sessions)
   <br>
-  Animations & hammer.js
+  animations & hammer.js
 </h3>
 
 <br>
