@@ -5,7 +5,7 @@
   </a>
 </p>
 <h3 align="center">
-  Full stack application using Ejs with MongoDB database
+  Full stack application using Ejs with MongoDb database
   <br>
   OAuth options with Express (sessions)
   <br>
