@@ -1,7 +1,7 @@
 <br>
 <p align="center">
   <a href="https://app-secret.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-  <img src="https://github.com/AndrasE/raw-readme/blob/main/secrets-readme-img.png?raw=true">
+  <img src="https://github.com/AndrasE/raw-readme/blob/main/secrets-readme-img.png?raw=true" widht="230px">
   </a>
 </p>
 <h3 align="center">
