@@ -16,7 +16,7 @@
 
 ## Hi there 👋
 
-I was doing my self-studies and I felt intrigued to take this project further as by using EJS with MongoDb user could interact with the App. I made a lot of changes to the original project; added authentications, animations and svgs with navbar and swipe functionalites and themes. It took me a bit of effort, but completed it. In the about section of the page you can read more about this project, difficulties i faced with examples and references. 
+I was doing my self-studies and I felt intrigued to take this project further as by using EJS with MongoDb user could interact with the App. I made a lot of changes to the   <a href="https://github.com/AndrasE/secret-original">original project</a>; added authentications, animations and svgs with navbar and swipe functionalites using hammer.js and themes. It took me a bit of effort, but completed it. In the about section of the page you can read more about this project, difficulties i faced with examples and references.🗒️
 
 I hope you find it useful for your own project!
 
