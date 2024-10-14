@@ -5,27 +5,23 @@
   </a>
 </p>
 <h3 align="center">
-  Full stack application using Ejs with MongoDb database
+  Full stack webapp using Ejs with MongoDb
   <br>
-  OAuth options with Express (sessions)
-  <br>
-  animations & hammer.js
+  with OAuth options with Express (sessions) cookies
 </h3>
 
 <br>
 
-## Hi there 👋
+## Hello there 👋
 
-As I was in final stages with my self-studies on Udemy. I felt intrigued to take this specific project further, implementing new features like EJS with MongoDb where the users can interact with the App. I made a lot of changes to the <a href="https://github.com/AndrasE/secret-original">original project</a>. Added animations, themes and svgs with navbar and swipe functionalites using hammer.js. It took me a bit of effort, but completed it: Ejs/Mongo/Express/Node App. In the about section of the page you can read more about this project and the challenges I faced plus particular examples and references on how I overcame these.🗒️
+<p>During my final stages of self-study on Udemy, I was intrigued to push a particular project further—one that involved MongoDB, Node, Express, and EJS. Originally, it was a simple CRUD application using MongoDB for the back-end and EJS for the front-end (<a href="https://github.com/AndrasE/secret-original">original project</a>). However, I made significant enhancements, adding user authentication with session cookies to ensure users could interact only with their own content while still being able to view other users' posts. Once authenticated, users remain logged in unless the cookie expires or the browser is closed.</p>
 
-I hope you find it useful for your own project!
+<p>To elevate the project further, I incorporated animations, themes, SVGs, and a dynamic navigation bar with swipe functionality using Hammer.js. These additions brought the app to life and improved user engagement. After sharing the project link in a study group, I was excited to see many "secrets" being posted, which highlighted the interactive nature of the app.</p>
 
-Thank you, code safe! 💻
-
-ps.: If you want to see the deployment its hosted on heroku eco-tier the server, it might take 2-3s to spin up, please be patient. 🐨
-
+<p>Overall, I am proud of the outcome—not only for the technical achievements but also for how it resonated with users. You can read a detailed report and learn more about the challenges I faced in the "About" or "Read More" sections of the app. Deployed on Heroku's eco-dyno, please note that it may take a few seconds for the server to wake up.</p>
 
 ## Run 🚀
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Start with cloning this repo on your local machine via cli or github-desktop:
@@ -34,30 +30,40 @@ Start with cloning this repo on your local machine via cli or github-desktop:
 $ git clone https://github.com/AndrasE/secrets
 $ cd PROJECTNAME
 ```
+
 To install and set up the library, run:
+
 ```sh
 $ npm install -S myLib
 ```
 
 Or if you prefer using Yarn:
+
 ```sh
 $ yarn add --dev myLib
 ```
 
 Add your own credentials:
+
 ```sh
 add own credentials or .env
 setup own google and facebook Apis
 ```
+
 Serving the app:
+
 ```sh
 $ npm start
 ```
+
 Running the tests:
+
 ```sh
 $ npm test
 ```
+
 Building a distribution version:
+
 ```sh
 $ npm run build
 ```
