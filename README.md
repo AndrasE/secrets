@@ -21,10 +21,10 @@
 <p>Overall, I am proud of the outcome—not only for the technical achievements but also for how it resonated with users. You can read a detailed report and learn more about the challenges I faced in the "About" or "Read More" sections of the app. Deployed on Heroku's eco-dyno, please note that it may take a few seconds for the server to wake up.</p>
 
 <p> Key Features: 
-<li>User authentication with session cookies, allowing personalized content management. </li> 
-<li>CRUD operations with MongoDB, enabling users to share and view posts securely.</li> 
-<li>Enhanced UI with animations, themes, and SVGs, along with swipe functionality via <a href=https://hammerjs.github.io/ target="_blank" rel="noopener noreferrer">hammer.js</a>.</li> 
-<li>Seamless navigation with a dynamic navbar and responsive design.</li> 
+<li>Authentication - User authentication with session cookies, allowing personalized content management. Includes Signup, Login, Signout, and the option to delete the account.</li> 
+<li>Content Management - CRUD operations with MongoDB, enabling users to share and view posts securely.</li> 
+<li>Dynamic UI & Navigation - Enhanced user interface with animations, themes, and SVGs, plus swipe functionality via <a href=https://hammerjs.github.io/ target="_blank" rel="noopener noreferrer">hammer.js</a>.</li> 
+<li>User Engagement - Seamless navigation with a dynamic navbar and responsive design to improve user interaction. </li>
 </p>
 
 ## Run 🚀
