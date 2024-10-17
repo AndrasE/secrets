@@ -14,7 +14,7 @@ During my final stages of self-study on Udemy, I was intrigued to push a particu
 
 To elevate the project further, I incorporated animations, themes, SVGs, and a dynamic navigation bar with swipe functionality using Hammer.js. These additions brought the app to life and improved user engagement. After sharing the project link in a study group, I was excited to see many "secrets" being posted, which highlighted the interactive nature of the app.
 
-Overall, I am proud of the outcome—not only for the technical achievements but also for how it resonated with users. You can read a detailed report and learn more about the challenges I faced in the "About" or "Read More" sections of the app. Deployed on Heroku's eco-dyno, please note that it may take a few seconds for the server to wake up.
+Overall, I am proud of the outcome - not only for the technical achievements but also for how it resonated with users. You can read a detailed report and learn more about the challenges I faced in the "About" or "Read More" sections of the app. Deployed on Heroku's eco-dyno, please note that it may take a few seconds for the server to wake up.
 
 ### Key Features
 
