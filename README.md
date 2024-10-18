@@ -10,7 +10,7 @@
 
 ## Hello there 👋
 
-During my final stages of self-study on Udemy, I was intrigued to push a particular project further—one that involved MongoDB, Node, Express, and EJS. Originally, it was a simple CRUD application using MongoDB for the back-end and EJS for the front-end **[original project](https://github.com/AndrasE/secret-original")**. However, I made significant enhancements, adding user authentication with session cookies to ensure users could interact only with their own content while still being able to view other users' posts. Once authenticated, users remain logged in unless the cookie expires or the browser is closed.
+During my final stages of self-study on Udemy, I was intrigued to push a particular project further—one that involved **[MongoDB](https://www.mongodb.com/)**, **[Express](https://www.npmjs.com/package/express-session)**, and **[EJS](https://ejs.co/)**. Originally, it was a simple CRUD application using MongoDB for the back-end and EJS for the front-end **[original project](https://github.com/AndrasE/secret-original")**. However, I made significant enhancements, adding user authentication with session cookies to ensure users could interact only with their own content while still being able to view other users' posts. Once authenticated, users remain logged in unless the cookie expires or the browser is closed.
 
 To elevate the project further, I incorporated animations, themes, SVGs, and a dynamic navigation bar with swipe functionality using Hammer.js. These additions brought the app to life and improved user engagement. After sharing the project link in a study group, I was excited to see many "secrets" being posted, which highlighted the interactive nature of the app.
 
