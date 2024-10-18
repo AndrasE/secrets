@@ -58,15 +58,3 @@ Serving the app:
 `
 $ npm start
 `
-
-Running the tests:
-
-`
-$ npm test
-`
-
-Building a distribution version:
-
-`
-$ npm run build
-`
