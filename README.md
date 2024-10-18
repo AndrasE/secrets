@@ -1,6 +1,6 @@
 <h3 align="center">
   <a href="https://app-secret.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-  <img src="https://github.com/AndrasE/raw-readme/blob/main/secrets-readme-img.png?raw=true" width="230px">
+  <img src="https://github.com/AndrasE/raw-readme/blob/main/secrets-readme-img.png?raw=true" width="180px">
   </a>
   <br/>
   EJS webapp with MongoDb database
