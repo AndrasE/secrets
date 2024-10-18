@@ -1,12 +1,12 @@
+<a width="300px">
 <h3 align="center">
   <a href="https://app-secret.herokuapp.com/" target="_blank" rel="noopener noreferrer">
   <img src="https://github.com/AndrasE/raw-readme/blob/main/secrets-readme-img.png?raw=true" width="180px">
   </a>
   <br/>
-  EJS webapp with MongoDb database
-  <br/>
-  & OAuth options with Express (session) cookies
+  EJS webapp with MongoDb database & OAuth options with Express (session) cookies
 </h3>
+</div>
 
 ## Hello there 👋
 
