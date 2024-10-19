@@ -19,7 +19,7 @@ Overall, I am proud of the outcome - not only for the technical achievements but
 <div align="center">
 <img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_1.png" width="220">
 <img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_2.png" width="220">
-<img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_4.png" width="220">
+<img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_3.png" width="220">
 </div>
 
 ### Key Features
