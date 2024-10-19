@@ -16,6 +16,12 @@ To elevate the project further, I incorporated animations, themes, SVGs, and a d
 
 Overall, I am proud of the outcome - not only for the technical achievements but also for how it resonated with users. You can read a detailed report and learn more about the challenges I faced in the "About" or "Read More" sections of the app. Deployed on Heroku's eco-dyno, please note that it may take a few seconds for the server to wake up.
 
+<div align="center">
+<img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_1.png" width="220">
+<img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_2.png" width="220">
+<img src="https://github.com/AndrasE/raw-readme/blob/c54d6a4c1f9c2f4b212235584ec55fdf695b0a95/thumbs/secrets_4.png" width="220">
+</div>
+
 ### Key Features
 
 - **Authentication** - User authentication with session cookies, allowing personalized content management. Includes Signup, Login, Signout, and the option to delete the account.
